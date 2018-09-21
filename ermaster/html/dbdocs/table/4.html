@@ -101,7 +101,7 @@ function asd() {
 	</tr>
 	<tr>
 	<tr>
-	<td align="center">&nbsp;</td>
+	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
 	<td align="center"><img src="../image/icons/foreign_key.gif">&nbsp;</td>
 	<td><a href="#94">ユーザID</a>&nbsp;</td>
 	<td>USER_ID&nbsp;</td>
@@ -110,13 +110,13 @@ function asd() {
 	<td align="center">NOT NULL&nbsp;</td>
 </tr>
 <tr>
-	<td align="center">&nbsp;</td>
+	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
 	<td align="center">&nbsp;</td>
 	<td><a href="#95">認証キータイプ</a>&nbsp;</td>
 	<td>CREDENTIAL_KEY_TYPE&nbsp;</td>
 	<td>varchar(50)&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td align="center">&nbsp;</td>
+	<td align="center">NOT NULL&nbsp;</td>
 </tr>
 <tr>
 	<td align="center">&nbsp;</td>
@@ -279,7 +279,7 @@ function asd() {
 </table>
 
 <a name="94"></a>
-<h3> <img src="../image/icons/foreign_key.gif"> ユーザID</h3>
+<h3><img src="../image/icons/pkey.gif"> <img src="../image/icons/foreign_key.gif"> ユーザID</h3>
 
 <dl>
 	<dd>USER_ID
@@ -300,7 +300,7 @@ function asd() {
 
 <hr>
 <a name="95"></a>
-<h3>  認証キータイプ</h3>
+<h3><img src="../image/icons/pkey.gif">  認証キータイプ</h3>
 
 <dl>
 	<dd>CREDENTIAL_KEY_TYPE
@@ -309,7 +309,7 @@ function asd() {
 	<p>
 	<dl>
 		<dt><b>UNIQUE : </b>FALSE<br></dt>
-		<dt><b>NOT NULL : </b>FALSE<br></dt>
+		<dt><b>NOT NULL : </b>TRUE<br></dt>
 		<dt><b>型 : </b>varchar(50)<br></dt>
 		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
 		<dt><b>デフォルト値 : </b><br></dt>

@@ -101,7 +101,7 @@ function asd() {
 	</tr>
 	<tr>
 	<tr>
-	<td align="center">&nbsp;</td>
+	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
 	<td align="center"><img src="../image/icons/foreign_key.gif">&nbsp;</td>
 	<td><a href="#72">質問ID</a>&nbsp;</td>
 	<td>QUESTION_ID&nbsp;</td>
@@ -110,13 +110,13 @@ function asd() {
 	<td align="center">NOT NULL&nbsp;</td>
 </tr>
 <tr>
-	<td align="center">&nbsp;</td>
+	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
 	<td align="center">&nbsp;</td>
 	<td><a href="#73">回答ID</a>&nbsp;</td>
 	<td>ANSWER_ID&nbsp;</td>
 	<td>varchar(4)&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td align="center">&nbsp;</td>
+	<td align="center">NOT NULL&nbsp;</td>
 </tr>
 <tr>
 	<td align="center">&nbsp;</td>
@@ -315,7 +315,7 @@ function asd() {
 </table>
 
 <a name="72"></a>
-<h3> <img src="../image/icons/foreign_key.gif"> 質問ID</h3>
+<h3><img src="../image/icons/pkey.gif"> <img src="../image/icons/foreign_key.gif"> 質問ID</h3>
 
 <dl>
 	<dd>QUESTION_ID
@@ -336,7 +336,7 @@ function asd() {
 
 <hr>
 <a name="73"></a>
-<h3>  回答ID</h3>
+<h3><img src="../image/icons/pkey.gif">  回答ID</h3>
 
 <dl>
 	<dd>ANSWER_ID
@@ -345,7 +345,7 @@ function asd() {
 	<p>
 	<dl>
 		<dt><b>UNIQUE : </b>FALSE<br></dt>
-		<dt><b>NOT NULL : </b>FALSE<br></dt>
+		<dt><b>NOT NULL : </b>TRUE<br></dt>
 		<dt><b>型 : </b>varchar(4)<br></dt>
 		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
 		<dt><b>デフォルト値 : </b><br></dt>

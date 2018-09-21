@@ -101,7 +101,7 @@ function asd() {
 	</tr>
 	<tr>
 	<tr>
-	<td align="center">&nbsp;</td>
+	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
 	<td align="center"><img src="../image/icons/foreign_key.gif">&nbsp;</td>
 	<td><a href="#166">ファンドID</a>&nbsp;</td>
 	<td>FUND_ID&nbsp;</td>
@@ -110,13 +110,13 @@ function asd() {
 	<td align="center">NOT NULL&nbsp;</td>
 </tr>
 <tr>
-	<td align="center">&nbsp;</td>
+	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
 	<td align="center">&nbsp;</td>
 	<td><a href="#189">目論見書番号</a>&nbsp;</td>
 	<td>PROSPECTUS_NO&nbsp;</td>
 	<td>int&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td align="center">&nbsp;</td>
+	<td align="center">NOT NULL&nbsp;</td>
 </tr>
 <tr>
 	<td align="center">&nbsp;</td>
@@ -293,7 +293,7 @@ function asd() {
 </table>
 
 <a name="166"></a>
-<h3> <img src="../image/icons/foreign_key.gif"> ファンドID</h3>
+<h3><img src="../image/icons/pkey.gif"> <img src="../image/icons/foreign_key.gif"> ファンドID</h3>
 
 <dl>
 	<dd>FUND_ID
@@ -314,7 +314,7 @@ function asd() {
 
 <hr>
 <a name="189"></a>
-<h3>  目論見書番号</h3>
+<h3><img src="../image/icons/pkey.gif">  目論見書番号</h3>
 
 <dl>
 	<dd>PROSPECTUS_NO
@@ -323,7 +323,7 @@ function asd() {
 	<p>
 	<dl>
 		<dt><b>UNIQUE : </b>FALSE<br></dt>
-		<dt><b>NOT NULL : </b>FALSE<br></dt>
+		<dt><b>NOT NULL : </b>TRUE<br></dt>
 		<dt><b>型 : </b>int<br></dt>
 		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
 		<dt><b>デフォルト値 : </b><br></dt>
