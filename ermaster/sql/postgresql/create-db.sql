@@ -1,0 +1,1 @@
+create database mynavi_ib encoding 'utf8';
