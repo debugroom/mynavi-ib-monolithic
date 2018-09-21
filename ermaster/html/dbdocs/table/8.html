@@ -1,0 +1,723 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN""http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>定期預金口座</title>
+		<link rel="stylesheet" type="text/css" href="../stylesheet.css" title="Style">
+	</head>
+<script>
+function asd() {
+	parent.document.title="定期預金口座";
+}
+</script>
+
+	<body onload="asd();">
+
+		<!-- ========== START OF NAVBAR ========== -->
+		<table border="0" width="100%" cellpadding="1" cellspacing="0">
+			<tr>
+				<td colspan="3" class="NavBarCell1">
+					<table border="0" cellpadding="0" cellspacing="3">
+						<tr align="center" valign="top">
+							<td class="NavBarCell1">
+								<a href="../overview-summary.html">概要</a>&nbsp;
+							</td>
+							<td class="NavBarCell1">
+								<a href="package-summary.html">オブジェクトタイプ</a>&nbsp;
+							</td>
+							<td class="NavBarCell1Rev"> &nbsp;
+								テーブル&nbsp;
+							</td>
+							<td class="NavBarCell1">
+								<a href="../help-doc.html">ヘルプ</a>&nbsp;
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td class="NavBarCell2">
+					&nbsp;<a HREF="7.html" ><b>前のテーブル</b></a>&nbsp;&nbsp;
+					&nbsp;<a HREF="9.html" ><b>次のテーブル</b></a>&nbsp;&nbsp;
+				</td>
+				<td class="NavBarCell2">
+					<a href="../index.html" target="_top">フレームあり</a>
+					&nbsp;&nbsp;&nbsp;
+					<a href="8.html" target="_top">フレームなし</a>
+					&nbsp;&nbsp;&nbsp;
+					<script>
+					<!--
+						if(window==top) {
+							document.writeln('<a href="../allclasses.html" target="">すべてのオブジェクト</a>');
+						}
+					//-->
+					</script>
+					<noscript>
+						<a href="../allclasses.html" target="">すべてのオブジェクト</a>
+					</noscript>
+				</td>
+			</tr>
+		</table>
+		<!-- =========== END OF NAVBAR =========== -->
+
+		<hr>
+		<a name="main"></a>
+		<h2>テーブル   定期預金口座</h2>
+		<hr>
+
+
+<dl>
+	<dt><b>物理名:</b></dt>
+		<dd>FIXED_DEPOSIT_ACCOUNT<br><br></dd>
+</dl>
+
+<dl>
+	<dt><b>制約:</b></dt>
+		<dd><br><br></dd>
+</dl>
+
+<pre style="font-size:1em;">
+
+</pre>
+
+<p>
+
+<!-- ======== Attribute ======== -->
+
+<a name="attribute_summary"></a>
+
+<table border="1" cellpadding="3" cellspacing="0" width="100%" class="AttributeTable">
+	<tr class="TableHeadingColor">
+		<th colspan="7">属性 の概要</th>
+	</tr>
+	<tr class="TableSubHeadingColor">
+		<th>PK</th>
+		<th>FK</th>
+		<th>論理名</th>
+		<th>物理名</th>
+		<th>型</th>
+		<th>UNIQUE</th>
+		<th>NOT NULL</th>
+	</tr>
+	<tr>
+	<tr>
+	<td align="center">&nbsp;</td>
+	<td align="center"><img src="../image/icons/foreign_key.gif">&nbsp;</td>
+	<td><a href="#125">ユーザID</a>&nbsp;</td>
+	<td>USER_ID&nbsp;</td>
+	<td>varchar(8)&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td align="center">NOT NULL&nbsp;</td>
+</tr>
+<tr>
+	<td align="center">&nbsp;</td>
+	<td align="center"><img src="../image/icons/foreign_key.gif">&nbsp;</td>
+	<td><a href="#126">金融機関コード</a>&nbsp;</td>
+	<td>FINANCIAL_CODE&nbsp;</td>
+	<td>varchar(4)&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td align="center">NOT NULL&nbsp;</td>
+</tr>
+<tr>
+	<td align="center">&nbsp;</td>
+	<td align="center"><img src="../image/icons/foreign_key.gif">&nbsp;</td>
+	<td><a href="#127">支店ID</a>&nbsp;</td>
+	<td>BRANCH_ID&nbsp;</td>
+	<td>varchar(6)&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td align="center">NOT NULL&nbsp;</td>
+</tr>
+<tr>
+	<td align="center">&nbsp;</td>
+	<td align="center"><img src="../image/icons/foreign_key.gif">&nbsp;</td>
+	<td><a href="#128">口座番号</a>&nbsp;</td>
+	<td>ACCOUNT_NO&nbsp;</td>
+	<td>varchar(7)&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td align="center">NOT NULL&nbsp;</td>
+</tr>
+<tr>
+	<td align="center">&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td><a href="#130">CIF番号</a>&nbsp;</td>
+	<td>CIF_NO&nbsp;</td>
+	<td>varchar(7)&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td align="center">&nbsp;</td>
+</tr>
+<tr>
+	<td align="center">&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td><a href="#129">定期預金口座番号</a>&nbsp;</td>
+	<td>FIXED_ACCOUNT_NO&nbsp;</td>
+	<td>varchar(7)&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td align="center">NOT NULL&nbsp;</td>
+</tr>
+<tr>
+	<td align="center">&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td><a href="#131">口座タイプ</a>&nbsp;</td>
+	<td>ACCOUNT_TYPE&nbsp;</td>
+	<td>varchar(50)&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td align="center">&nbsp;</td>
+</tr>
+<tr>
+	<td align="center">&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td><a href="#132">口座開設日時</a>&nbsp;</td>
+	<td>ACCOUNT_START_DATE&nbsp;</td>
+	<td>timestamp(29)&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td align="center">&nbsp;</td>
+</tr>
+<tr>
+	<td align="center">&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td><a href="#133">最終更新日時</a>&nbsp;</td>
+	<td>LAST_UPDATED_AT&nbsp;</td>
+	<td>timestamp(29)&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td align="center">&nbsp;</td>
+</tr>
+<tr>
+	<td align="center">&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td><a href="#134">バージョン</a>&nbsp;</td>
+	<td>VER&nbsp;</td>
+	<td>int&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td align="center">&nbsp;</td>
+</tr>
+
+	</tr>
+</table>
+
+<p>
+
+<!-- ========== FOREIGN KEY =========== -->
+
+<a name="foreign_key"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%" class="AttributeTable">
+	<tr class="TableHeadingColor">
+		<th colspan="7">外部キー</th>
+	</tr>
+	<tr class="TableSubHeadingColor">
+		<th width="12">属性</th>
+		<th width="28%">参照テーブル</th>
+		<th width="12%">参照キー</th>
+		<th width="12%">ON UPDATE</th>
+		<th width="12%">ON DELETE</th>
+		<th width="12%">親の多重度</th>
+		<th width="12%">子の多重度</th>
+	</tr>
+	<tr>
+	<td><a href="#125">ユーザID&nbsp;</a></td>
+	<td><a href="../table/18.html">普通預金&nbsp;</a></td>
+	<td><a href="../table/18.html#107">ユーザID&nbsp;</a></td>
+	<td align="center">RESTRICT&nbsp;</td>
+	<td align="center">RESTRICT&nbsp;</td>
+	<td align="center">1&nbsp;</td>
+	<td align="center">1..n&nbsp;</td>
+</tr>
+<tr>
+	<td><a href="#125">ユーザID&nbsp;</a></td>
+	<td><a href="../table/18.html">普通預金&nbsp;</a></td>
+	<td><a href="../table/18.html#107">ユーザID&nbsp;</a></td>
+	<td align="center">RESTRICT&nbsp;</td>
+	<td align="center">RESTRICT&nbsp;</td>
+	<td align="center">1&nbsp;</td>
+	<td align="center">1..n&nbsp;</td>
+</tr>
+<tr>
+	<td><a href="#126">金融機関コード&nbsp;</a></td>
+	<td><a href="../table/18.html">普通預金&nbsp;</a></td>
+	<td><a href="../table/18.html#81">金融機関コード&nbsp;</a></td>
+	<td align="center">RESTRICT&nbsp;</td>
+	<td align="center">RESTRICT&nbsp;</td>
+	<td align="center">1&nbsp;</td>
+	<td align="center">1..n&nbsp;</td>
+</tr>
+<tr>
+	<td><a href="#126">金融機関コード&nbsp;</a></td>
+	<td><a href="../table/18.html">普通預金&nbsp;</a></td>
+	<td><a href="../table/18.html#81">金融機関コード&nbsp;</a></td>
+	<td align="center">RESTRICT&nbsp;</td>
+	<td align="center">RESTRICT&nbsp;</td>
+	<td align="center">1&nbsp;</td>
+	<td align="center">1..n&nbsp;</td>
+</tr>
+<tr>
+	<td><a href="#127">支店ID&nbsp;</a></td>
+	<td><a href="../table/18.html">普通預金&nbsp;</a></td>
+	<td><a href="../table/18.html#82">支店ID&nbsp;</a></td>
+	<td align="center">RESTRICT&nbsp;</td>
+	<td align="center">RESTRICT&nbsp;</td>
+	<td align="center">1&nbsp;</td>
+	<td align="center">1..n&nbsp;</td>
+</tr>
+<tr>
+	<td><a href="#127">支店ID&nbsp;</a></td>
+	<td><a href="../table/18.html">普通預金&nbsp;</a></td>
+	<td><a href="../table/18.html#82">支店ID&nbsp;</a></td>
+	<td align="center">RESTRICT&nbsp;</td>
+	<td align="center">RESTRICT&nbsp;</td>
+	<td align="center">1&nbsp;</td>
+	<td align="center">1..n&nbsp;</td>
+</tr>
+<tr>
+	<td><a href="#128">口座番号&nbsp;</a></td>
+	<td><a href="../table/18.html">普通預金&nbsp;</a></td>
+	<td><a href="../table/18.html#108">口座番号&nbsp;</a></td>
+	<td align="center">RESTRICT&nbsp;</td>
+	<td align="center">RESTRICT&nbsp;</td>
+	<td align="center">1&nbsp;</td>
+	<td align="center">1..n&nbsp;</td>
+</tr>
+<tr>
+	<td><a href="#128">口座番号&nbsp;</a></td>
+	<td><a href="../table/18.html">普通預金&nbsp;</a></td>
+	<td><a href="../table/18.html#108">口座番号&nbsp;</a></td>
+	<td align="center">RESTRICT&nbsp;</td>
+	<td align="center">RESTRICT&nbsp;</td>
+	<td align="center">1&nbsp;</td>
+	<td align="center">1..n&nbsp;</td>
+</tr>
+
+</table>
+
+<p>
+
+<!-- ========== REFERENCE KEY =========== -->
+
+<a name="reference_key"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%" class="AttributeTable">
+	<tr class="TableHeadingColor">
+		<th colspan="7">参照キー</th>
+	</tr>
+	<tr class="TableSubHeadingColor">
+		<th width="12">属性</th>
+		<th width="28%">テーブル</th>
+		<th width="12%">外部キー</th>
+		<th width="12%">ON UPDATE</th>
+		<th width="12%">ON DELETE</th>
+		<th width="12%">親の多重度</th>
+		<th width="12%">子の多重度</th>
+	</tr>
+	<tr>
+	<td><a href="#125">ユーザID&nbsp;</a></td>
+	<td><a href="../table/7.html">定期預金預入&nbsp;</a></td>
+	<td><a href="../table/7.html#114">ユーザID&nbsp;</a></td>
+	<td align="center">RESTRICT&nbsp;</td>
+	<td align="center">RESTRICT&nbsp;</td>
+	<td align="center">1&nbsp;</td>
+	<td align="center">1..n&nbsp;</td>
+</tr>
+<tr>
+	<td><a href="#126">金融機関コード&nbsp;</a></td>
+	<td><a href="../table/7.html">定期預金預入&nbsp;</a></td>
+	<td><a href="../table/7.html#115">金融機関コード&nbsp;</a></td>
+	<td align="center">RESTRICT&nbsp;</td>
+	<td align="center">RESTRICT&nbsp;</td>
+	<td align="center">1&nbsp;</td>
+	<td align="center">1..n&nbsp;</td>
+</tr>
+<tr>
+	<td><a href="#127">支店ID&nbsp;</a></td>
+	<td><a href="../table/7.html">定期預金預入&nbsp;</a></td>
+	<td><a href="../table/7.html#116">支店ID&nbsp;</a></td>
+	<td align="center">RESTRICT&nbsp;</td>
+	<td align="center">RESTRICT&nbsp;</td>
+	<td align="center">1&nbsp;</td>
+	<td align="center">1..n&nbsp;</td>
+</tr>
+<tr>
+	<td><a href="#128">口座番号&nbsp;</a></td>
+	<td><a href="../table/7.html">定期預金預入&nbsp;</a></td>
+	<td><a href="../table/7.html#117">口座番号&nbsp;</a></td>
+	<td align="center">RESTRICT&nbsp;</td>
+	<td align="center">RESTRICT&nbsp;</td>
+	<td align="center">1&nbsp;</td>
+	<td align="center">1..n&nbsp;</td>
+</tr>
+<tr>
+	<td><a href="#129">定期預金口座番号&nbsp;</a></td>
+	<td><a href="../table/7.html">定期預金預入&nbsp;</a></td>
+	<td><a href="../table/7.html#118">定期預金口座番号&nbsp;</a></td>
+	<td align="center">RESTRICT&nbsp;</td>
+	<td align="center">RESTRICT&nbsp;</td>
+	<td align="center">1&nbsp;</td>
+	<td align="center">1..n&nbsp;</td>
+</tr>
+
+</table>
+
+<p>
+
+<!-- ========== Complex Unique Key =========== -->
+
+<a name="complex_unique_key"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%" class="AttributeTable">
+	<tr class="TableHeadingColor">
+		<th colspan="2">複合一意キー</th>
+	</tr>
+	<tr class="TableSubHeadingColor">
+		<th>&nbsp;</th>
+				<th>&nbsp;</th>
+
+	</tr>
+		<tr>
+		<th class="TableSubHeadingColor" align="left">ユーザID&nbsp;</th>
+				<td align="center">1&nbsp;</td>
+
+	</tr>
+	<tr>
+		<th class="TableSubHeadingColor" align="left">金融機関コード&nbsp;</th>
+				<td align="center">2&nbsp;</td>
+
+	</tr>
+	<tr>
+		<th class="TableSubHeadingColor" align="left">支店ID&nbsp;</th>
+				<td align="center">3&nbsp;</td>
+
+	</tr>
+	<tr>
+		<th class="TableSubHeadingColor" align="left">口座番号&nbsp;</th>
+				<td align="center">4&nbsp;</td>
+
+	</tr>
+	<tr>
+		<th class="TableSubHeadingColor" align="left">CIF番号&nbsp;</th>
+				<td align="center">&nbsp;</td>
+
+	</tr>
+	<tr>
+		<th class="TableSubHeadingColor" align="left">定期預金口座番号&nbsp;</th>
+				<td align="center">5&nbsp;</td>
+
+	</tr>
+	<tr>
+		<th class="TableSubHeadingColor" align="left">口座タイプ&nbsp;</th>
+				<td align="center">&nbsp;</td>
+
+	</tr>
+	<tr>
+		<th class="TableSubHeadingColor" align="left">口座開設日時&nbsp;</th>
+				<td align="center">&nbsp;</td>
+
+	</tr>
+	<tr>
+		<th class="TableSubHeadingColor" align="left">最終更新日時&nbsp;</th>
+				<td align="center">&nbsp;</td>
+
+	</tr>
+	<tr>
+		<th class="TableSubHeadingColor" align="left">バージョン&nbsp;</th>
+				<td align="center">&nbsp;</td>
+
+	</tr>
+
+</table>
+
+
+
+<p>
+
+<!-- ========== INDEX SUMMARY =========== -->
+
+<a name="index_summary"><!-- --></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%" class="AttributeTable">
+	<tr class="TableHeadingColor">
+		<th colspan="3">インデックス の概要</th>
+	</tr>
+	<tr class="TableSubHeadingColor">
+		<th>インデックス名</th>
+		<th>タイプ</th>
+		<th>UNIQUE</th>
+	</tr>
+	
+</table>
+
+<p>
+
+
+
+
+
+<p>
+
+<!-- ============ ATTRIBUTE DETAIL =========== -->
+
+<a name="attribute_detail"></a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%" class="AttributeTable">
+	<tr class="TableHeadingColor">
+		<th>属性 の詳細</th>
+	</tr>
+</table>
+
+<a name="125"></a>
+<h3> <img src="../image/icons/foreign_key.gif"> ユーザID</h3>
+
+<dl>
+	<dd>USER_ID
+	<p>
+	<dd><pre></pre>
+	<p>
+	<dl>
+		<dt><b>UNIQUE : </b>FALSE<br></dt>
+		<dt><b>NOT NULL : </b>TRUE<br></dt>
+		<dt><b>型 : </b>varchar(8)<br></dt>
+		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
+		<dt><b>デフォルト値 : </b><br></dt>
+		<dt><b>制約 : </b><br></dt>
+	</dl>
+</dl>
+
+<p>
+
+<hr>
+<a name="126"></a>
+<h3> <img src="../image/icons/foreign_key.gif"> 金融機関コード</h3>
+
+<dl>
+	<dd>FINANCIAL_CODE
+	<p>
+	<dd><pre></pre>
+	<p>
+	<dl>
+		<dt><b>UNIQUE : </b>FALSE<br></dt>
+		<dt><b>NOT NULL : </b>TRUE<br></dt>
+		<dt><b>型 : </b>varchar(4)<br></dt>
+		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
+		<dt><b>デフォルト値 : </b><br></dt>
+		<dt><b>制約 : </b><br></dt>
+	</dl>
+</dl>
+
+<p>
+
+<hr>
+<a name="127"></a>
+<h3> <img src="../image/icons/foreign_key.gif"> 支店ID</h3>
+
+<dl>
+	<dd>BRANCH_ID
+	<p>
+	<dd><pre></pre>
+	<p>
+	<dl>
+		<dt><b>UNIQUE : </b>FALSE<br></dt>
+		<dt><b>NOT NULL : </b>TRUE<br></dt>
+		<dt><b>型 : </b>varchar(6)<br></dt>
+		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
+		<dt><b>デフォルト値 : </b><br></dt>
+		<dt><b>制約 : </b><br></dt>
+	</dl>
+</dl>
+
+<p>
+
+<hr>
+<a name="128"></a>
+<h3> <img src="../image/icons/foreign_key.gif"> 口座番号</h3>
+
+<dl>
+	<dd>ACCOUNT_NO
+	<p>
+	<dd><pre></pre>
+	<p>
+	<dl>
+		<dt><b>UNIQUE : </b>FALSE<br></dt>
+		<dt><b>NOT NULL : </b>TRUE<br></dt>
+		<dt><b>型 : </b>varchar(7)<br></dt>
+		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
+		<dt><b>デフォルト値 : </b><br></dt>
+		<dt><b>制約 : </b><br></dt>
+	</dl>
+</dl>
+
+<p>
+
+<hr>
+<a name="130"></a>
+<h3>  CIF番号</h3>
+
+<dl>
+	<dd>CIF_NO
+	<p>
+	<dd><pre></pre>
+	<p>
+	<dl>
+		<dt><b>UNIQUE : </b>FALSE<br></dt>
+		<dt><b>NOT NULL : </b>FALSE<br></dt>
+		<dt><b>型 : </b>varchar(7)<br></dt>
+		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
+		<dt><b>デフォルト値 : </b><br></dt>
+		<dt><b>制約 : </b><br></dt>
+	</dl>
+</dl>
+
+<p>
+
+<hr>
+<a name="129"></a>
+<h3>  定期預金口座番号</h3>
+
+<dl>
+	<dd>FIXED_ACCOUNT_NO
+	<p>
+	<dd><pre></pre>
+	<p>
+	<dl>
+		<dt><b>UNIQUE : </b>FALSE<br></dt>
+		<dt><b>NOT NULL : </b>TRUE<br></dt>
+		<dt><b>型 : </b>varchar(7)<br></dt>
+		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
+		<dt><b>デフォルト値 : </b><br></dt>
+		<dt><b>制約 : </b><br></dt>
+	</dl>
+</dl>
+
+<p>
+
+<hr>
+<a name="131"></a>
+<h3>  口座タイプ</h3>
+
+<dl>
+	<dd>ACCOUNT_TYPE
+	<p>
+	<dd><pre></pre>
+	<p>
+	<dl>
+		<dt><b>UNIQUE : </b>FALSE<br></dt>
+		<dt><b>NOT NULL : </b>FALSE<br></dt>
+		<dt><b>型 : </b>varchar(50)<br></dt>
+		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
+		<dt><b>デフォルト値 : </b><br></dt>
+		<dt><b>制約 : </b><br></dt>
+	</dl>
+</dl>
+
+<p>
+
+<hr>
+<a name="132"></a>
+<h3>  口座開設日時</h3>
+
+<dl>
+	<dd>ACCOUNT_START_DATE
+	<p>
+	<dd><pre></pre>
+	<p>
+	<dl>
+		<dt><b>UNIQUE : </b>FALSE<br></dt>
+		<dt><b>NOT NULL : </b>FALSE<br></dt>
+		<dt><b>型 : </b>timestamp(29)<br></dt>
+		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
+		<dt><b>デフォルト値 : </b><br></dt>
+		<dt><b>制約 : </b><br></dt>
+	</dl>
+</dl>
+
+<p>
+
+<hr>
+<a name="133"></a>
+<h3>  最終更新日時</h3>
+
+<dl>
+	<dd>LAST_UPDATED_AT
+	<p>
+	<dd><pre></pre>
+	<p>
+	<dl>
+		<dt><b>UNIQUE : </b>FALSE<br></dt>
+		<dt><b>NOT NULL : </b>FALSE<br></dt>
+		<dt><b>型 : </b>timestamp(29)<br></dt>
+		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
+		<dt><b>デフォルト値 : </b><br></dt>
+		<dt><b>制約 : </b><br></dt>
+	</dl>
+</dl>
+
+<p>
+
+<hr>
+<a name="134"></a>
+<h3>  バージョン</h3>
+
+<dl>
+	<dd>VER
+	<p>
+	<dd><pre></pre>
+	<p>
+	<dl>
+		<dt><b>UNIQUE : </b>FALSE<br></dt>
+		<dt><b>NOT NULL : </b>FALSE<br></dt>
+		<dt><b>型 : </b>int<br></dt>
+		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
+		<dt><b>デフォルト値 : </b><br></dt>
+		<dt><b>制約 : </b><br></dt>
+	</dl>
+</dl>
+
+<p>
+
+<hr>
+
+
+
+
+		<!-- ========== START OF NAVBAR ========== -->
+		<table border="0" width="100%" cellpadding="1" cellspacing="0">
+			<tr>
+				<td colspan="3" class="NavBarCell1">
+					<table border="0" cellpadding="0" cellspacing="3">
+						<tr align="center" valign="top">
+							<td class="NavBarCell1">
+								<a href="../overview-summary.html">概要</a>&nbsp;
+							</td>
+							<td class="NavBarCell1">
+								<a href="package-summary.html">オブジェクトタイプ</a>&nbsp;
+							</td>
+							<td class="NavBarCell1Rev"> &nbsp;
+								テーブル&nbsp;
+							</td>
+							<td class="NavBarCell1">
+								<a href="../help-doc.html">ヘルプ</a>&nbsp;
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td class="NavBarCell2">
+					&nbsp;<a HREF="7.html" ><b>前のテーブル</b></a>&nbsp;&nbsp;
+					&nbsp;<a HREF="9.html" ><b>次のテーブル</b></a>&nbsp;&nbsp;
+				</td>
+				<td class="NavBarCell2">
+					<a href="../index.html" target="_top">フレームあり</a>
+					&nbsp;&nbsp;&nbsp;
+					<a href="8.html" target="_top">フレームなし</a>
+					&nbsp;&nbsp;&nbsp;
+					<script>
+					<!--
+						if(window==top) {
+							document.writeln('<a href="../allclasses.html" target="">すべてのオブジェクト</a>');
+						}
+					//-->
+					</script>
+					<noscript>
+						<a href="../allclasses.html" target="">すべてのオブジェクト</a>
+					</noscript>
+				</td>
+			</tr>
+		</table>
+		<!-- =========== END OF NAVBAR =========== -->
+
+		<hr>
+
+	</body>
+</HTML>
