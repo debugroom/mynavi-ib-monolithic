@@ -101,16 +101,16 @@ function asd() {
 	</tr>
 	<tr>
 	<tr>
-	<td align="center">&nbsp;</td>
+	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
 	<td align="center">&nbsp;</td>
 	<td><a href="#185">取引ID</a>&nbsp;</td>
 	<td>TRADE_ID&nbsp;</td>
 	<td>varchar(128)&nbsp;</td>
 	<td align="center">UNIQUE&nbsp;</td>
-	<td align="center">&nbsp;</td>
+	<td align="center">NOT NULL&nbsp;</td>
 </tr>
 <tr>
-	<td align="center">&nbsp;</td>
+	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
 	<td align="center"><img src="../image/icons/foreign_key.gif">&nbsp;</td>
 	<td><a href="#176">ユーザID</a>&nbsp;</td>
 	<td>USER_ID&nbsp;</td>
@@ -119,7 +119,7 @@ function asd() {
 	<td align="center">NOT NULL&nbsp;</td>
 </tr>
 <tr>
-	<td align="center">&nbsp;</td>
+	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
 	<td align="center"><img src="../image/icons/foreign_key.gif">&nbsp;</td>
 	<td><a href="#177">金融機関コード</a>&nbsp;</td>
 	<td>FINANCIAL_CODE&nbsp;</td>
@@ -128,7 +128,7 @@ function asd() {
 	<td align="center">NOT NULL&nbsp;</td>
 </tr>
 <tr>
-	<td align="center">&nbsp;</td>
+	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
 	<td align="center"><img src="../image/icons/foreign_key.gif">&nbsp;</td>
 	<td><a href="#178">支店ID</a>&nbsp;</td>
 	<td>BRANCH_ID&nbsp;</td>
@@ -137,7 +137,7 @@ function asd() {
 	<td align="center">NOT NULL&nbsp;</td>
 </tr>
 <tr>
-	<td align="center">&nbsp;</td>
+	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
 	<td align="center"><img src="../image/icons/foreign_key.gif">&nbsp;</td>
 	<td><a href="#179">口座番号</a>&nbsp;</td>
 	<td>ACCOUNT_NO&nbsp;</td>
@@ -146,7 +146,7 @@ function asd() {
 	<td align="center">NOT NULL&nbsp;</td>
 </tr>
 <tr>
-	<td align="center">&nbsp;</td>
+	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
 	<td align="center"><img src="../image/icons/foreign_key.gif">&nbsp;</td>
 	<td><a href="#180">ファンド口座番号</a>&nbsp;</td>
 	<td>FUND_ACCOUNT_NO&nbsp;</td>
@@ -155,7 +155,7 @@ function asd() {
 	<td align="center">NOT NULL&nbsp;</td>
 </tr>
 <tr>
-	<td align="center">&nbsp;</td>
+	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
 	<td align="center"><img src="../image/icons/foreign_key.gif">&nbsp;</td>
 	<td><a href="#165">ファンドID</a>&nbsp;</td>
 	<td>FUND_ID&nbsp;</td>
@@ -343,7 +343,7 @@ function asd() {
 </table>
 
 <a name="185"></a>
-<h3>  取引ID</h3>
+<h3><img src="../image/icons/pkey.gif">  取引ID</h3>
 
 <dl>
 	<dd>TRADE_ID
@@ -352,7 +352,7 @@ function asd() {
 	<p>
 	<dl>
 		<dt><b>UNIQUE : </b>TRUE<br></dt>
-		<dt><b>NOT NULL : </b>FALSE<br></dt>
+		<dt><b>NOT NULL : </b>TRUE<br></dt>
 		<dt><b>型 : </b>varchar(128)<br></dt>
 		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
 		<dt><b>デフォルト値 : </b><br></dt>
@@ -364,7 +364,7 @@ function asd() {
 
 <hr>
 <a name="176"></a>
-<h3> <img src="../image/icons/foreign_key.gif"> ユーザID</h3>
+<h3><img src="../image/icons/pkey.gif"> <img src="../image/icons/foreign_key.gif"> ユーザID</h3>
 
 <dl>
 	<dd>USER_ID
@@ -385,7 +385,7 @@ function asd() {
 
 <hr>
 <a name="177"></a>
-<h3> <img src="../image/icons/foreign_key.gif"> 金融機関コード</h3>
+<h3><img src="../image/icons/pkey.gif"> <img src="../image/icons/foreign_key.gif"> 金融機関コード</h3>
 
 <dl>
 	<dd>FINANCIAL_CODE
@@ -406,7 +406,7 @@ function asd() {
 
 <hr>
 <a name="178"></a>
-<h3> <img src="../image/icons/foreign_key.gif"> 支店ID</h3>
+<h3><img src="../image/icons/pkey.gif"> <img src="../image/icons/foreign_key.gif"> 支店ID</h3>
 
 <dl>
 	<dd>BRANCH_ID
@@ -427,7 +427,7 @@ function asd() {
 
 <hr>
 <a name="179"></a>
-<h3> <img src="../image/icons/foreign_key.gif"> 口座番号</h3>
+<h3><img src="../image/icons/pkey.gif"> <img src="../image/icons/foreign_key.gif"> 口座番号</h3>
 
 <dl>
 	<dd>ACCOUNT_NO
@@ -448,7 +448,7 @@ function asd() {
 
 <hr>
 <a name="180"></a>
-<h3> <img src="../image/icons/foreign_key.gif"> ファンド口座番号</h3>
+<h3><img src="../image/icons/pkey.gif"> <img src="../image/icons/foreign_key.gif"> ファンド口座番号</h3>
 
 <dl>
 	<dd>FUND_ACCOUNT_NO
@@ -469,7 +469,7 @@ function asd() {
 
 <hr>
 <a name="165"></a>
-<h3> <img src="../image/icons/foreign_key.gif"> ファンドID</h3>
+<h3><img src="../image/icons/pkey.gif"> <img src="../image/icons/foreign_key.gif"> ファンドID</h3>
 
 <dl>
 	<dd>FUND_ID
