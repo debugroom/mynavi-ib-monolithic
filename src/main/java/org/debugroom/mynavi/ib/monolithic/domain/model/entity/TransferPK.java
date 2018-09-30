@@ -22,7 +22,7 @@ public class TransferPK implements Serializable {
         this.tradeId = tradeId;
     }
 
-    @Column(name = "user_id", nullable = false, insertable = false, updatable = false,  length = 8)
+    @Column(name = "user_id", nullable = false, length = 8)
     @Id
     public String getUserId() {
         return userId;
@@ -32,7 +32,7 @@ public class TransferPK implements Serializable {
         this.userId = userId;
     }
 
-    @Column(name = "financial_code", nullable = false, insertable = false, updatable = false,  length = 4)
+    @Column(name = "financial_code", nullable = false, length = 4)
     @Id
     public String getFinancialCode() {
         return financialCode;
@@ -42,7 +42,7 @@ public class TransferPK implements Serializable {
         this.financialCode = financialCode;
     }
 
-    @Column(name = "branch_id", nullable = false, insertable = false, updatable = false,  length = 6)
+    @Column(name = "branch_id", nullable = false, length = 6)
     @Id
     public String getBranchId() {
         return branchId;
@@ -52,7 +52,7 @@ public class TransferPK implements Serializable {
         this.branchId = branchId;
     }
 
-    @Column(name = "account_no", nullable = false, insertable = false, updatable = false,  length = 7)
+    @Column(name = "account_no", nullable = false, length = 7)
     @Id
     public String getAccountNo() {
         return accountNo;

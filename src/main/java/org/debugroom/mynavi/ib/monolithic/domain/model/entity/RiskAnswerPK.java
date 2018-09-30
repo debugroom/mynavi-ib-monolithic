@@ -9,7 +9,7 @@ public class RiskAnswerPK implements Serializable {
     private String questionId;
     private String answerId;
 
-    @Column(name = "question_id", nullable = false, insertable = false, updatable = false,  length = 4)
+    @Column(name = "question_id", nullable = false, length = 4)
     @Id
     public String getQuestionId() {
         return questionId;
@@ -19,7 +19,7 @@ public class RiskAnswerPK implements Serializable {
         this.questionId = questionId;
     }
 
-    @Column(name = "answer_id", nullable = false, insertable = false, updatable = false,  length = 4)
+    @Column(name = "answer_id", nullable = false, length = 4)
     @Id
     public String getAnswerId() {
         return answerId;

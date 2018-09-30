@@ -169,7 +169,11 @@ public class FixedDeposit {
     }
 
     @ManyToOne
-    @JoinColumns({@JoinColumn(name = "user_id", referencedColumnName = "user_id", nullable = false), @JoinColumn(name = "financial_code", referencedColumnName = "financial_code", nullable = false), @JoinColumn(name = "branch_id", referencedColumnName = "branch_id", nullable = false), @JoinColumn(name = "account_no", referencedColumnName = "account_no", nullable = false), @JoinColumn(name = "fixed_account_no", referencedColumnName = "fixed_account_no", nullable = false)})
+    @JoinColumns({@JoinColumn(name = "user_id", referencedColumnName = "user_id", nullable = false, insertable = false, updatable = false),
+            @JoinColumn(name = "financial_code", referencedColumnName = "financial_code", nullable = false, insertable = false, updatable = false),
+            @JoinColumn(name = "branch_id", referencedColumnName = "branch_id", nullable = false, insertable = false, updatable = false),
+            @JoinColumn(name = "account_no", referencedColumnName = "account_no", nullable = false, insertable = false, updatable = false),
+            @JoinColumn(name = "fixed_account_no", referencedColumnName = "fixed_account_no", nullable = false, insertable = false, updatable = false)})
     public FixedDepositAccount getFixedDepositAccount() {
         return fixedDepositAccount;
     }

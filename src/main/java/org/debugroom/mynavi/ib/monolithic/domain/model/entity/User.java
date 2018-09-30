@@ -26,6 +26,7 @@ public class User {
     private Collection<AnswerOfUser> answerOfUsersByUserId;
     private Collection<Credential> credentialsByUserId;
     private Collection<SavingsAccount> savingsAccountsByUserId;
+    private Collection<Credential> credntialsByUserId;
 
     @Id
     @Column(name = "user_id", nullable = false, length = 8)
@@ -128,7 +129,7 @@ public class User {
         return Objects.hash(userId, firstName, lastName, loginId, birthday, sex, lastUpdatedAt, ver);
     }
 
-    @OneToMany(mappedBy = "userByUserId")
+    @OneToMany(mappedBy = "usrByUserId")
     public Collection<AnswerOfUser> getAnswerOfUsersByUserId() {
         return answerOfUsersByUserId;
     }
@@ -153,5 +154,14 @@ public class User {
 
     public void setSavingsAccountsByUserId(Collection<SavingsAccount> savingsAccountsByUserId) {
         this.savingsAccountsByUserId = savingsAccountsByUserId;
+    }
+
+    @OneToMany(mappedBy = "usrByUserId")
+    public Collection<Credential> getCredntialsByUserId() {
+        return credntialsByUserId;
+    }
+
+    public void setCredntialsByUserId(Collection<Credential> credntialsByUserId) {
+        this.credntialsByUserId = credntialsByUserId;
     }
 }

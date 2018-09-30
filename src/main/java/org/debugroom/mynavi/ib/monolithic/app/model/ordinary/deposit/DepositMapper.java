@@ -3,7 +3,7 @@ package org.debugroom.mynavi.ib.monolithic.app.model.ordinary.deposit;
 import java.math.BigDecimal;
 import java.time.ZoneId;
 
-import org.debugroom.mynavi.ib.monolithic.app.model.common.AppConsts;
+import org.debugroom.mynavi.ib.monolithic.app.AppConsts;
 
 public interface DepositMapper {
 

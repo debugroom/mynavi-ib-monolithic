@@ -32,15 +32,38 @@ public class SavingsAccountManipulatorImpl implements SavingsAccountManipulator 
     @Override
     public void addTotalAmountOf(SavingsAccount savingsAccount, BigDecimal addMoney)
             throws BusinessException {
-        BigDecimal totalAmount = new BigDecimal(savingsAccount.getTotalAmount()).add(addMoney);
-        savingsAccount.setTotalAmount(totalAmount.toBigInteger());
+        SavingsAccount targetSavingsAccount = savingsAccountRepository.getOne(
+                SavingsAccountPK.builder()
+                        .userId(savingsAccount.getUserId())
+                        .financialCode(savingsAccount.getFinancialCode())
+                        .branchId(savingsAccount.getBranchId())
+                        .accountNo(savingsAccount.getAccountNo())
+                        .build());
+        BigDecimal totalAmount = new BigDecimal(
+                targetSavingsAccount.getTotalAmount()).add(addMoney);
+        targetSavingsAccount.setTotalAmount(totalAmount.toBigInteger());
     }
 
     @Override
     public void subtractTotalAmountOf(SavingsAccount savingsAccount, BigDecimal subtractMoney)
             throws BusinessException{
-        BigDecimal totalAmount = new BigDecimal(savingsAccount.getTotalAmount()).subtract(subtractMoney);
-        savingsAccount.setTotalAmount(totalAmount.toBigInteger());
+        SavingsAccount targetSavingsAccount = savingsAccountRepository.getOne(
+                SavingsAccountPK.builder()
+                        .userId(savingsAccount.getUserId())
+                        .financialCode(savingsAccount.getFinancialCode())
+                        .branchId(savingsAccount.getBranchId())
+                        .accountNo(savingsAccount.getAccountNo())
+                .build());
+        if(targetSavingsAccount.getTotalAmount().compareTo(
+                subtractMoney.toBigInteger()) < 0){
+            throw new BusinessException("error.ordinary.deposit.0002",
+                    "Insufficient balance for transfer order in finacode: [1], branch: [2], account: [3]",
+                    savingsAccount.getFinancialCode(), savingsAccount.getBranchId(),
+                    savingsAccount.getAccountNo());
+        }
+        BigDecimal totalAmount = new BigDecimal(targetSavingsAccount
+                .getTotalAmount()).subtract(subtractMoney);
+        targetSavingsAccount.setTotalAmount(totalAmount.toBigInteger());
     }
 
     private SavingsAccount getSavingsAccount(SavingsAccount savingsAccount) throws BusinessException{

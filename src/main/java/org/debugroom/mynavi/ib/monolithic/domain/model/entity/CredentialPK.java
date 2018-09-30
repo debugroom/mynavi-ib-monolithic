@@ -9,7 +9,7 @@ public class CredentialPK implements Serializable {
     private String userId;
     private String credentialKeyType;
 
-    @Column(name = "user_id", nullable = false, insertable = false, updatable = false,  length = 8)
+    @Column(name = "user_id", nullable = false, length = 8)
     @Id
     public String getUserId() {
         return userId;

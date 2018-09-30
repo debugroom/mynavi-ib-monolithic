@@ -195,7 +195,7 @@ public class SavingsAccount {
     }
 
     @ManyToOne
-    @JoinColumn(name = "user_id", referencedColumnName = "user_id", nullable = false)
+    @JoinColumns({@JoinColumn(name = "user_id", referencedColumnName = "user_id", nullable = false, insertable = false, updatable = false)})
     public User getUsrByUserId() {
         return usrByUserId;
     }
@@ -205,7 +205,8 @@ public class SavingsAccount {
     }
 
     @ManyToOne
-    @JoinColumns({@JoinColumn(name = "financial_code", referencedColumnName = "financial_code", nullable = false), @JoinColumn(name = "branch_id", referencedColumnName = "branch_id", nullable = false)})
+    @JoinColumns({@JoinColumn(name = "financial_code", referencedColumnName = "financial_code", nullable = false, insertable = false, updatable = false),
+            @JoinColumn(name = "branch_id", referencedColumnName = "branch_id", nullable = false, insertable = false, updatable = false)})
     public Branch getBranch() {
         return branch;
     }

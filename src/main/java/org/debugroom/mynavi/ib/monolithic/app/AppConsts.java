@@ -1,4 +1,4 @@
-package org.debugroom.mynavi.ib.monolithic.app.model.common;
+package org.debugroom.mynavi.ib.monolithic.app;
 
 public class AppConsts {
 

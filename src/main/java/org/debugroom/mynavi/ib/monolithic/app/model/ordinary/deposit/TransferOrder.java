@@ -16,14 +16,14 @@ import lombok.NoArgsConstructor;
 public class TransferOrder implements Serializable {
 
     private String tradeId;
-    private String userId;
-    private String financialCode;
-    private String branchId;
-    private String accountNo;
+    private String transferToUserId;
+    private String transferToFinancialCode;
+    private String transferToBranchId;
+    private String transferToAccountNo;
     private BigDecimal amount;
     private String transferTradeDay;
     private BigDecimal fee;
     private ZonedDateTime lastUpdatedAt;
-    private SavingsAccount savingsAccount;
+    private SavingsAccount transferFromSavingsAccount;
 
 }

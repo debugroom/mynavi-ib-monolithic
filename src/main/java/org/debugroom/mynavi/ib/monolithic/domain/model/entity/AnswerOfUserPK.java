@@ -10,7 +10,7 @@ public class AnswerOfUserPK implements Serializable {
     private String answerId;
     private String userId;
 
-    @Column(name = "question_id", nullable = false, insertable = false, updatable = false,  length = 4)
+    @Column(name = "question_id", nullable = false, length = 4)
     @Id
     public String getQuestionId() {
         return questionId;
@@ -20,7 +20,7 @@ public class AnswerOfUserPK implements Serializable {
         this.questionId = questionId;
     }
 
-    @Column(name = "answer_id", nullable = false, insertable = false, updatable = false,  length = 4)
+    @Column(name = "answer_id", nullable = false, length = 4)
     @Id
     public String getAnswerId() {
         return answerId;
@@ -30,7 +30,7 @@ public class AnswerOfUserPK implements Serializable {
         this.answerId = answerId;
     }
 
-    @Column(name = "user_id", nullable = false, insertable = false, updatable = false,  length = 8)
+    @Column(name = "user_id", nullable = false, length = 8)
     @Id
     public String getUserId() {
         return userId;

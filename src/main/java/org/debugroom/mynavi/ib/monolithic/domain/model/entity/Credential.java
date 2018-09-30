@@ -14,6 +14,7 @@ public class Credential {
     private Timestamp lastUpdatedAt;
     private Integer ver;
     private User userByUserId;
+    private User usrByUserId;
 
     @Id
     @Column(name = "user_id", nullable = false, length = 8)
@@ -84,12 +85,22 @@ public class Credential {
     }
 
     @ManyToOne
-    @JoinColumn(name = "user_id", referencedColumnName = "user_id", nullable = false)
+    @JoinColumn(name = "user_id", referencedColumnName = "user_id", nullable = false, insertable = false, updatable = false)
     public User getUserByUserId() {
         return userByUserId;
     }
 
     public void setUserByUserId(User userByUserId) {
         this.userByUserId = userByUserId;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "user_id", referencedColumnName = "user_id", nullable = false, insertable = false, updatable = false)
+    public User getUsrByUserId() {
+        return usrByUserId;
+    }
+
+    public void setUsrByUserId(User usrByUserId) {
+        this.usrByUserId = usrByUserId;
     }
 }

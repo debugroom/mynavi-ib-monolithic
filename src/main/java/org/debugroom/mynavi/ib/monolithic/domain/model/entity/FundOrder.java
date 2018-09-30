@@ -146,7 +146,11 @@ public class FundOrder {
     }
 
     @ManyToOne
-    @JoinColumns({@JoinColumn(name = "user_id", referencedColumnName = "user_id", nullable = false), @JoinColumn(name = "financial_code", referencedColumnName = "financial_code", nullable = false), @JoinColumn(name = "branch_id", referencedColumnName = "branch_id", nullable = false), @JoinColumn(name = "account_no", referencedColumnName = "account_no", nullable = false), @JoinColumn(name = "fund_account_no", referencedColumnName = "fund_account_no", nullable = false)})
+    @JoinColumns({@JoinColumn(name = "user_id", referencedColumnName = "user_id", nullable = false, insertable = false, updatable = false),
+            @JoinColumn(name = "financial_code", referencedColumnName = "financial_code", nullable = false, insertable = false, updatable = false),
+            @JoinColumn(name = "branch_id", referencedColumnName = "branch_id", nullable = false, insertable = false, updatable = false),
+            @JoinColumn(name = "account_no", referencedColumnName = "account_no", nullable = false, insertable = false, updatable = false),
+            @JoinColumn(name = "fund_account_no", referencedColumnName = "fund_account_no", nullable = false, insertable = false, updatable = false)})
     public FundAccount getFundAccount() {
         return fundAccount;
     }
@@ -156,7 +160,7 @@ public class FundOrder {
     }
 
     @ManyToOne
-    @JoinColumn(name = "fund_id", referencedColumnName = "fund_id", nullable = false)
+    @JoinColumn(name = "fund_id", referencedColumnName = "fund_id", nullable = false, insertable = false, updatable = false)
     public Fund getFundByFundId() {
         return fundByFundId;
     }

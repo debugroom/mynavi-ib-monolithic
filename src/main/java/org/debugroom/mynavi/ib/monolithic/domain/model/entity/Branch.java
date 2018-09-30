@@ -93,7 +93,7 @@ public class Branch {
     }
 
     @ManyToOne
-    @JoinColumn(name = "financial_code", referencedColumnName = "financial_code", nullable = false)
+    @JoinColumns({@JoinColumn(name = "financial_code", referencedColumnName = "financial_code", nullable = false, insertable = false, updatable = false)})
     public FinancialInstitution getFinancialInstitutionByFinancialCode() {
         return financialInstitutionByFinancialCode;
     }

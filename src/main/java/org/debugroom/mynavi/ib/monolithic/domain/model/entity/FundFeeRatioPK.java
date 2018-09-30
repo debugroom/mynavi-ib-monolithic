@@ -9,7 +9,7 @@ public class FundFeeRatioPK implements Serializable {
     private String fundId;
     private String validStartDay;
 
-    @Column(name = "fund_id", nullable = false, insertable = false, updatable = false,  length = 8)
+    @Column(name = "fund_id", nullable = false, length = 8)
     @Id
     public String getFundId() {
         return fundId;

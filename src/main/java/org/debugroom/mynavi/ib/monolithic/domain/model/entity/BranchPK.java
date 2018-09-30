@@ -17,7 +17,7 @@ public class BranchPK implements Serializable {
     private String financialCode;
     private String branchId;
 
-    @Column(name = "financial_code", nullable = false,  insertable = false, updatable = false, length = 4)
+    @Column(name = "financial_code", nullable = false, length = 4)
     @Id
     public String getFinancialCode() {
         return financialCode;

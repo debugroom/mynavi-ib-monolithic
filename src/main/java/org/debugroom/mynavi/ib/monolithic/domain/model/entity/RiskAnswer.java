@@ -105,7 +105,7 @@ public class RiskAnswer {
     }
 
     @ManyToOne
-    @JoinColumn(name = "question_id", referencedColumnName = "question_id", nullable = false)
+    @JoinColumn(name = "question_id", referencedColumnName = "question_id", nullable = false, insertable = false, updatable = false)
     public RiskQuestion getRiskQuestionByQuestionId() {
         return riskQuestionByQuestionId;
     }

@@ -26,6 +26,9 @@ public class Transfer {
     private Timestamp lastUpdatedAt;
     private Integer ver;
     private SavingsAccount savingsAccount;
+    private String transferToFinancialCode;
+    private String transferToBranchiId;
+    private String transferToAccountNo;
 
     @Id
     @Column(name = "trade_id", nullable = false, length = 128)
@@ -151,12 +154,45 @@ public class Transfer {
     }
 
     @ManyToOne
-    @JoinColumns({@JoinColumn(name = "user_id", referencedColumnName = "user_id", nullable = false), @JoinColumn(name = "financial_code", referencedColumnName = "financial_code", nullable = false), @JoinColumn(name = "branch_id", referencedColumnName = "branch_id", nullable = false), @JoinColumn(name = "account_no", referencedColumnName = "account_no", nullable = false)})
+    @JoinColumns({@JoinColumn(name = "user_id", referencedColumnName = "user_id", nullable = false, insertable = false, updatable = false),
+            @JoinColumn(name = "financial_code", referencedColumnName = "financial_code", nullable = false, insertable = false, updatable = false),
+            @JoinColumn(name = "branch_id", referencedColumnName = "branch_id", nullable = false, insertable = false, updatable = false),
+            @JoinColumn(name = "account_no", referencedColumnName = "account_no", nullable = false, insertable = false, updatable = false)})
     public SavingsAccount getSavingsAccount() {
         return savingsAccount;
     }
 
     public void setSavingsAccount(SavingsAccount savingsAccount) {
         this.savingsAccount = savingsAccount;
+    }
+
+    @Basic
+    @Column(name = "transfer_to_financial_code", nullable = true, length = 4)
+    public String getTransferToFinancialCode() {
+        return transferToFinancialCode;
+    }
+
+    public void setTransferToFinancialCode(String transferToFinancialCode) {
+        this.transferToFinancialCode = transferToFinancialCode;
+    }
+
+    @Basic
+    @Column(name = "transfer_to_branchi_id", nullable = true, length = 6)
+    public String getTransferToBranchiId() {
+        return transferToBranchiId;
+    }
+
+    public void setTransferToBranchiId(String transferToBranchiId) {
+        this.transferToBranchiId = transferToBranchiId;
+    }
+
+    @Basic
+    @Column(name = "transfer_to_account_no", nullable = true, length = 7)
+    public String getTransferToAccountNo() {
+        return transferToAccountNo;
+    }
+
+    public void setTransferToAccountNo(String transferToAccountNo) {
+        this.transferToAccountNo = transferToAccountNo;
     }
 }

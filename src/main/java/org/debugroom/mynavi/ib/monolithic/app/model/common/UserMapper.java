@@ -1,5 +1,6 @@
 package org.debugroom.mynavi.ib.monolithic.app.model.common;
 
+import org.debugroom.mynavi.ib.monolithic.app.AppConsts;
 import org.debugroom.mynavi.ib.monolithic.app.model.ordinary.deposit.SavingsAccountMapper;
 
 import java.time.ZoneId;

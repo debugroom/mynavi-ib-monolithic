@@ -23,6 +23,7 @@ public class User implements Serializable {
     private String birthday;
     private Sex sex;
     private ZonedDateTime lastUpdatedAt;
+    private List<Credential> credentials;
     private List<SavingsAccount> savingsAccounts;
 
     public static User createFromEntity(org.debugroom.mynavi.ib.monolithic.domain.model.entity.User entity){

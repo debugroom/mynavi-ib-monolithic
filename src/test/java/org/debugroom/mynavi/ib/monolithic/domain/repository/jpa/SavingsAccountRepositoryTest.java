@@ -24,12 +24,6 @@ public class SavingsAccountRepositoryTest {
     TestEntityManager testEntityManager;
 
     @Autowired
-    FinancialInstitutionRepository financialInstitutionRepository;
-
-    @Autowired
-    BranchRepository branchRepository;
-
-    @Autowired
     SavingsAccountRepository savingsAccountRepository;
 
     @Before
@@ -63,11 +57,9 @@ public class SavingsAccountRepositoryTest {
                         .build();
         FinancialInstitution financialInstitution1 = FinancialInstitution.builder()
                 .financialCode("0001").financialInstitutionName("AAAA")
-//                .branchesByFinancialCode(Arrays.asList(branch1))
                 .build();
         FinancialInstitution financialInstitution2 = FinancialInstitution.builder()
                 .financialCode("0002").financialInstitutionName("BBBB")
-//                .branchesByFinancialCode(Arrays.asList(branch2))
                 .build();
         Branch branch1 = Branch.builder()
                 .branchId("001")
@@ -75,16 +67,12 @@ public class SavingsAccountRepositoryTest {
                 .branchName("AAAA-Branch")
                 .lastUpdatedAt(new Timestamp(System.currentTimeMillis()))
                 .ver(0)
-                .financialInstitutionByFinancialCode(financialInstitution1)
-                .savingsAccounts(Arrays.asList(savingsAccount1))
                 .build();
         Branch branch2 = Branch.builder()
                 .financialCode("0002")
                 .branchId("002")
                 .branchName("BBBB-Branch")
                 .lastUpdatedAt(new Timestamp(System.currentTimeMillis()))
-                .financialInstitutionByFinancialCode(financialInstitution2)
-                .savingsAccounts(Arrays.asList(savingsAccount2))
                 .ver(0)
                 .build();
         testEntityManager.persist(User.builder().userId("00000001").firstName("FirstName1")
@@ -93,20 +81,15 @@ public class SavingsAccountRepositoryTest {
                 .savingsAccountsByUserId(Arrays.asList(savingsAccount2)).build());
         testEntityManager.persist(financialInstitution1);
         testEntityManager.persist(financialInstitution2);
-//        testEntityManager.persist(branch1);
-//        testEntityManager.persist(branch2);
-//        testEntityManager.persist(savingsAccount1);
-//        testEntityManager.persist(savingsAccount2);
+        testEntityManager.persist(branch1);
+        testEntityManager.persist(branch2);
+        testEntityManager.persist(savingsAccount1);
+        testEntityManager.persist(savingsAccount2);
     }
 
     @Test
     public void testExistsById(){
 
-        FinancialInstitution financialInstitution = financialInstitutionRepository.getOne("0001");
-//        financialInstitution.getBranchesByFinancialCode()
-//                .stream().forEach(p ->log.info(p.getBranchName()));
-   //     Branch branch = branchRepository.getOne(BranchPK.builder().financialCode("0001").branchId("001").build());
-//        log.info("Branch" + branch.toString());
         boolean isExists = savingsAccountRepository.existsById(
                 SavingsAccountPK.builder()
                         .userId("00000001")
