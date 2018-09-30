@@ -103,7 +103,7 @@ function asd() {
 	<tr>
 	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#197">質問ID</a>&nbsp;</td>
+	<td><a href="#200">質問ID</a>&nbsp;</td>
 	<td>QUESTION_ID&nbsp;</td>
 	<td>varchar(4)&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -112,7 +112,7 @@ function asd() {
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#198">質問</a>&nbsp;</td>
+	<td><a href="#201">質問</a>&nbsp;</td>
 	<td>QUESTION&nbsp;</td>
 	<td>varchar(1024)&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -121,7 +121,7 @@ function asd() {
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#199">最終更新日時</a>&nbsp;</td>
+	<td><a href="#202">最終更新日時</a>&nbsp;</td>
 	<td>LAST_UPDATED_AT&nbsp;</td>
 	<td>timestamp(29)&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -130,7 +130,7 @@ function asd() {
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#200">バージョン</a>&nbsp;</td>
+	<td><a href="#203">バージョン</a>&nbsp;</td>
 	<td>VER&nbsp;</td>
 	<td>int&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -180,9 +180,18 @@ function asd() {
 		<th width="12%">子の多重度</th>
 	</tr>
 	<tr>
-	<td><a href="#197">質問ID&nbsp;</a></td>
+	<td><a href="#200">質問ID&nbsp;</a></td>
 	<td><a href="../table/16.html">リスク回答&nbsp;</a></td>
-	<td><a href="../table/16.html#72">質問ID&nbsp;</a></td>
+	<td><a href="../table/16.html#75">質問ID&nbsp;</a></td>
+	<td align="center">RESTRICT&nbsp;</td>
+	<td align="center">RESTRICT&nbsp;</td>
+	<td align="center">1&nbsp;</td>
+	<td align="center">1..n&nbsp;</td>
+</tr>
+<tr>
+	<td><a href="#200">質問ID&nbsp;</a></td>
+	<td><a href="../table/16.html">リスク回答&nbsp;</a></td>
+	<td><a href="../table/16.html#75">質問ID&nbsp;</a></td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">1&nbsp;</td>
@@ -243,7 +252,7 @@ function asd() {
 	</tr>
 </table>
 
-<a name="197"></a>
+<a name="200"></a>
 <h3><img src="../image/icons/pkey.gif">  質問ID</h3>
 
 <dl>
@@ -264,7 +273,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="198"></a>
+<a name="201"></a>
 <h3>  質問</h3>
 
 <dl>
@@ -285,7 +294,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="199"></a>
+<a name="202"></a>
 <h3>  最終更新日時</h3>
 
 <dl>
@@ -306,7 +315,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="200"></a>
+<a name="203"></a>
 <h3>  バージョン</h3>
 
 <dl>
