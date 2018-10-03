@@ -103,7 +103,7 @@ function asd() {
 	<tr>
 	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#138">取引ID</a>&nbsp;</td>
+	<td><a href="#142">取引ID</a>&nbsp;</td>
 	<td>TRADE_ID&nbsp;</td>
 	<td>varchar(128)&nbsp;</td>
 	<td align="center">UNIQUE&nbsp;</td>
@@ -112,7 +112,7 @@ function asd() {
 <tr>
 	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
 	<td align="center"><img src="../image/icons/foreign_key.gif">&nbsp;</td>
-	<td><a href="#139">ユーザID</a>&nbsp;</td>
+	<td><a href="#143">ユーザID</a>&nbsp;</td>
 	<td>USER_ID&nbsp;</td>
 	<td>varchar(8)&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -121,7 +121,7 @@ function asd() {
 <tr>
 	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
 	<td align="center"><img src="../image/icons/foreign_key.gif">&nbsp;</td>
-	<td><a href="#140">金融機関コード</a>&nbsp;</td>
+	<td><a href="#144">金融機関コード</a>&nbsp;</td>
 	<td>FINANCIAL_CODE&nbsp;</td>
 	<td>varchar(4)&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -130,7 +130,7 @@ function asd() {
 <tr>
 	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
 	<td align="center"><img src="../image/icons/foreign_key.gif">&nbsp;</td>
-	<td><a href="#141">支店ID</a>&nbsp;</td>
+	<td><a href="#145">支店ID</a>&nbsp;</td>
 	<td>BRANCH_ID&nbsp;</td>
 	<td>varchar(6)&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -139,7 +139,7 @@ function asd() {
 <tr>
 	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
 	<td align="center"><img src="../image/icons/foreign_key.gif">&nbsp;</td>
-	<td><a href="#142">口座番号</a>&nbsp;</td>
+	<td><a href="#146">口座番号</a>&nbsp;</td>
 	<td>ACCOUNT_NO&nbsp;</td>
 	<td>varchar(7)&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -148,7 +148,7 @@ function asd() {
 <tr>
 	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
 	<td align="center"><img src="../image/icons/foreign_key.gif">&nbsp;</td>
-	<td><a href="#143">外貨預金口座番号</a>&nbsp;</td>
+	<td><a href="#147">外貨預金口座番号</a>&nbsp;</td>
 	<td>FOREIGN_CURRENCY_ACCOUNT_NO&nbsp;</td>
 	<td>varchar(7)&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -157,7 +157,16 @@ function asd() {
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#144">残高</a>&nbsp;</td>
+	<td><a href="#148">外貨預金タイプ</a>&nbsp;</td>
+	<td>FOREIGN_CURRENCY_DEPOSIT_TYPE&nbsp;</td>
+	<td>varchar(50)&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td align="center">&nbsp;</td>
+</tr>
+<tr>
+	<td align="center">&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td><a href="#149">残高</a>&nbsp;</td>
 	<td>BALANCE&nbsp;</td>
 	<td>decimal&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -166,7 +175,7 @@ function asd() {
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#145">取引開始日時</a>&nbsp;</td>
+	<td><a href="#150">取引開始日時</a>&nbsp;</td>
 	<td>TRADE_START_DATE&nbsp;</td>
 	<td>timestamp(29)&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -175,7 +184,7 @@ function asd() {
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#146">満期日</a>&nbsp;</td>
+	<td><a href="#151">満期日</a>&nbsp;</td>
 	<td>MATURITY_DAY&nbsp;</td>
 	<td>varchar(8)&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -184,7 +193,7 @@ function asd() {
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#147">料率</a>&nbsp;</td>
+	<td><a href="#152">料率</a>&nbsp;</td>
 	<td>RATIO&nbsp;</td>
 	<td>decimal&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -193,7 +202,7 @@ function asd() {
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#148">最終更新日時</a>&nbsp;</td>
+	<td><a href="#153">最終更新日時</a>&nbsp;</td>
 	<td>LAST_UPDATED_AT&nbsp;</td>
 	<td>timestamp(29)&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -202,7 +211,7 @@ function asd() {
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#149">バージョン</a>&nbsp;</td>
+	<td><a href="#154">バージョン</a>&nbsp;</td>
 	<td>VER&nbsp;</td>
 	<td>int&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -231,45 +240,45 @@ function asd() {
 		<th width="12%">子の多重度</th>
 	</tr>
 	<tr>
-	<td><a href="#139">ユーザID&nbsp;</a></td>
+	<td><a href="#143">ユーザID&nbsp;</a></td>
 	<td><a href="../table/10.html">外貨預金口座&nbsp;</a></td>
-	<td><a href="../table/10.html#150">ユーザID&nbsp;</a></td>
+	<td><a href="../table/10.html#155">ユーザID&nbsp;</a></td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">1&nbsp;</td>
 	<td align="center">1..n&nbsp;</td>
 </tr>
 <tr>
-	<td><a href="#140">金融機関コード&nbsp;</a></td>
+	<td><a href="#144">金融機関コード&nbsp;</a></td>
 	<td><a href="../table/10.html">外貨預金口座&nbsp;</a></td>
-	<td><a href="../table/10.html#151">金融機関コード&nbsp;</a></td>
+	<td><a href="../table/10.html#156">金融機関コード&nbsp;</a></td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">1&nbsp;</td>
 	<td align="center">1..n&nbsp;</td>
 </tr>
 <tr>
-	<td><a href="#141">支店ID&nbsp;</a></td>
+	<td><a href="#145">支店ID&nbsp;</a></td>
 	<td><a href="../table/10.html">外貨預金口座&nbsp;</a></td>
-	<td><a href="../table/10.html#152">支店ID&nbsp;</a></td>
+	<td><a href="../table/10.html#157">支店ID&nbsp;</a></td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">1&nbsp;</td>
 	<td align="center">1..n&nbsp;</td>
 </tr>
 <tr>
-	<td><a href="#142">口座番号&nbsp;</a></td>
+	<td><a href="#146">口座番号&nbsp;</a></td>
 	<td><a href="../table/10.html">外貨預金口座&nbsp;</a></td>
-	<td><a href="../table/10.html#153">口座番号&nbsp;</a></td>
+	<td><a href="../table/10.html#158">口座番号&nbsp;</a></td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">1&nbsp;</td>
 	<td align="center">1..n&nbsp;</td>
 </tr>
 <tr>
-	<td><a href="#143">外貨預金口座番号&nbsp;</a></td>
+	<td><a href="#147">外貨預金口座番号&nbsp;</a></td>
 	<td><a href="../table/10.html">外貨預金口座&nbsp;</a></td>
-	<td><a href="../table/10.html#154">外貨預金口座番号&nbsp;</a></td>
+	<td><a href="../table/10.html#159">外貨預金口座番号&nbsp;</a></td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">1&nbsp;</td>
@@ -344,6 +353,11 @@ function asd() {
 
 	</tr>
 	<tr>
+		<th class="TableSubHeadingColor" align="left">外貨預金タイプ&nbsp;</th>
+				<td align="center">&nbsp;</td>
+
+	</tr>
+	<tr>
 		<th class="TableSubHeadingColor" align="left">残高&nbsp;</th>
 				<td align="center">&nbsp;</td>
 
@@ -412,7 +426,7 @@ function asd() {
 	</tr>
 </table>
 
-<a name="138"></a>
+<a name="142"></a>
 <h3><img src="../image/icons/pkey.gif">  取引ID</h3>
 
 <dl>
@@ -433,7 +447,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="139"></a>
+<a name="143"></a>
 <h3><img src="../image/icons/pkey.gif"> <img src="../image/icons/foreign_key.gif"> ユーザID</h3>
 
 <dl>
@@ -454,7 +468,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="140"></a>
+<a name="144"></a>
 <h3><img src="../image/icons/pkey.gif"> <img src="../image/icons/foreign_key.gif"> 金融機関コード</h3>
 
 <dl>
@@ -475,7 +489,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="141"></a>
+<a name="145"></a>
 <h3><img src="../image/icons/pkey.gif"> <img src="../image/icons/foreign_key.gif"> 支店ID</h3>
 
 <dl>
@@ -496,7 +510,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="142"></a>
+<a name="146"></a>
 <h3><img src="../image/icons/pkey.gif"> <img src="../image/icons/foreign_key.gif"> 口座番号</h3>
 
 <dl>
@@ -517,7 +531,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="143"></a>
+<a name="147"></a>
 <h3><img src="../image/icons/pkey.gif"> <img src="../image/icons/foreign_key.gif"> 外貨預金口座番号</h3>
 
 <dl>
@@ -538,7 +552,28 @@ function asd() {
 <p>
 
 <hr>
-<a name="144"></a>
+<a name="148"></a>
+<h3>  外貨預金タイプ</h3>
+
+<dl>
+	<dd>FOREIGN_CURRENCY_DEPOSIT_TYPE
+	<p>
+	<dd><pre></pre>
+	<p>
+	<dl>
+		<dt><b>UNIQUE : </b>FALSE<br></dt>
+		<dt><b>NOT NULL : </b>FALSE<br></dt>
+		<dt><b>型 : </b>varchar(50)<br></dt>
+		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
+		<dt><b>デフォルト値 : </b><br></dt>
+		<dt><b>制約 : </b><br></dt>
+	</dl>
+</dl>
+
+<p>
+
+<hr>
+<a name="149"></a>
 <h3>  残高</h3>
 
 <dl>
@@ -559,7 +594,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="145"></a>
+<a name="150"></a>
 <h3>  取引開始日時</h3>
 
 <dl>
@@ -580,7 +615,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="146"></a>
+<a name="151"></a>
 <h3>  満期日</h3>
 
 <dl>
@@ -601,7 +636,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="147"></a>
+<a name="152"></a>
 <h3>  料率</h3>
 
 <dl>
@@ -622,7 +657,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="148"></a>
+<a name="153"></a>
 <h3>  最終更新日時</h3>
 
 <dl>
@@ -643,7 +678,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="149"></a>
+<a name="154"></a>
 <h3>  バージョン</h3>
 
 <dl>

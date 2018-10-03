@@ -103,7 +103,7 @@ function asd() {
 	<tr>
 	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
 	<td align="center"><img src="../image/icons/foreign_key.gif">&nbsp;</td>
-	<td><a href="#75">質問ID</a>&nbsp;</td>
+	<td><a href="#78">質問ID</a>&nbsp;</td>
 	<td>QUESTION_ID&nbsp;</td>
 	<td>varchar(4)&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -112,7 +112,7 @@ function asd() {
 <tr>
 	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#76">回答ID</a>&nbsp;</td>
+	<td><a href="#79">回答ID</a>&nbsp;</td>
 	<td>ANSWER_ID&nbsp;</td>
 	<td>varchar(4)&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -121,7 +121,7 @@ function asd() {
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#197">回答</a>&nbsp;</td>
+	<td><a href="#203">回答</a>&nbsp;</td>
 	<td>ANSWER&nbsp;</td>
 	<td>varchar(1024)&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -130,7 +130,7 @@ function asd() {
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#198">最終更新日時</a>&nbsp;</td>
+	<td><a href="#204">最終更新日時</a>&nbsp;</td>
 	<td>LAST_UPDATED_AT&nbsp;</td>
 	<td>timestamp(29)&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -139,7 +139,7 @@ function asd() {
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#199">バージョン</a>&nbsp;</td>
+	<td><a href="#205">バージョン</a>&nbsp;</td>
 	<td>VER&nbsp;</td>
 	<td>int&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -168,18 +168,18 @@ function asd() {
 		<th width="12%">子の多重度</th>
 	</tr>
 	<tr>
-	<td><a href="#75">質問ID&nbsp;</a></td>
+	<td><a href="#78">質問ID&nbsp;</a></td>
 	<td><a href="../table/17.html">リスク質問&nbsp;</a></td>
-	<td><a href="../table/17.html#200">質問ID&nbsp;</a></td>
+	<td><a href="../table/17.html#206">質問ID&nbsp;</a></td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">1&nbsp;</td>
 	<td align="center">1..n&nbsp;</td>
 </tr>
 <tr>
-	<td><a href="#75">質問ID&nbsp;</a></td>
+	<td><a href="#78">質問ID&nbsp;</a></td>
 	<td><a href="../table/17.html">リスク質問&nbsp;</a></td>
-	<td><a href="../table/17.html#200">質問ID&nbsp;</a></td>
+	<td><a href="../table/17.html#206">質問ID&nbsp;</a></td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">1&nbsp;</td>
@@ -207,36 +207,36 @@ function asd() {
 		<th width="12%">子の多重度</th>
 	</tr>
 	<tr>
-	<td><a href="#75">質問ID&nbsp;</a></td>
+	<td><a href="#78">質問ID&nbsp;</a></td>
 	<td><a href="../table/0.html">ユーザ回答&nbsp;</a></td>
-	<td><a href="../table/0.html#70">質問ID&nbsp;</a></td>
+	<td><a href="../table/0.html#73">質問ID&nbsp;</a></td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">1&nbsp;</td>
 	<td align="center">1..n&nbsp;</td>
 </tr>
 <tr>
-	<td><a href="#76">回答ID&nbsp;</a></td>
+	<td><a href="#79">回答ID&nbsp;</a></td>
 	<td><a href="../table/0.html">ユーザ回答&nbsp;</a></td>
-	<td><a href="../table/0.html#71">回答ID&nbsp;</a></td>
+	<td><a href="../table/0.html#74">回答ID&nbsp;</a></td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">1&nbsp;</td>
 	<td align="center">1..n&nbsp;</td>
 </tr>
 <tr>
-	<td><a href="#75">質問ID&nbsp;</a></td>
+	<td><a href="#78">質問ID&nbsp;</a></td>
 	<td><a href="../table/3.html">リスク質問別購入可能ファンド&nbsp;</a></td>
-	<td><a href="../table/3.html#90">質問ID&nbsp;</a></td>
+	<td><a href="../table/3.html#93">質問ID&nbsp;</a></td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">1&nbsp;</td>
 	<td align="center">1..n&nbsp;</td>
 </tr>
 <tr>
-	<td><a href="#76">回答ID&nbsp;</a></td>
+	<td><a href="#79">回答ID&nbsp;</a></td>
 	<td><a href="../table/3.html">リスク質問別購入可能ファンド&nbsp;</a></td>
-	<td><a href="../table/3.html#91">回答ID&nbsp;</a></td>
+	<td><a href="../table/3.html#94">回答ID&nbsp;</a></td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">1&nbsp;</td>
@@ -323,7 +323,7 @@ function asd() {
 	</tr>
 </table>
 
-<a name="75"></a>
+<a name="78"></a>
 <h3><img src="../image/icons/pkey.gif"> <img src="../image/icons/foreign_key.gif"> 質問ID</h3>
 
 <dl>
@@ -344,7 +344,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="76"></a>
+<a name="79"></a>
 <h3><img src="../image/icons/pkey.gif">  回答ID</h3>
 
 <dl>
@@ -365,7 +365,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="197"></a>
+<a name="203"></a>
 <h3>  回答</h3>
 
 <dl>
@@ -386,7 +386,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="198"></a>
+<a name="204"></a>
 <h3>  最終更新日時</h3>
 
 <dl>
@@ -407,7 +407,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="199"></a>
+<a name="205"></a>
 <h3>  バージョン</h3>
 
 <dl>

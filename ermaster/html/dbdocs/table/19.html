@@ -103,7 +103,7 @@ function asd() {
 	<tr>
 	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#214">取引ID</a>&nbsp;</td>
+	<td><a href="#220">取引ID</a>&nbsp;</td>
 	<td>TRADE_ID&nbsp;</td>
 	<td>varchar(128)&nbsp;</td>
 	<td align="center">UNIQUE&nbsp;</td>
@@ -112,7 +112,7 @@ function asd() {
 <tr>
 	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
 	<td align="center"><img src="../image/icons/foreign_key.gif">&nbsp;</td>
-	<td><a href="#210">ユーザID</a>&nbsp;</td>
+	<td><a href="#216">ユーザID</a>&nbsp;</td>
 	<td>USER_ID&nbsp;</td>
 	<td>varchar(8)&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -121,7 +121,7 @@ function asd() {
 <tr>
 	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
 	<td align="center"><img src="../image/icons/foreign_key.gif">&nbsp;</td>
-	<td><a href="#211">金融機関コード</a>&nbsp;</td>
+	<td><a href="#217">金融機関コード</a>&nbsp;</td>
 	<td>FINANCIAL_CODE&nbsp;</td>
 	<td>varchar(4)&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -130,7 +130,7 @@ function asd() {
 <tr>
 	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
 	<td align="center"><img src="../image/icons/foreign_key.gif">&nbsp;</td>
-	<td><a href="#212">支店ID</a>&nbsp;</td>
+	<td><a href="#218">支店ID</a>&nbsp;</td>
 	<td>BRANCH_ID&nbsp;</td>
 	<td>varchar(6)&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -139,7 +139,7 @@ function asd() {
 <tr>
 	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
 	<td align="center"><img src="../image/icons/foreign_key.gif">&nbsp;</td>
-	<td><a href="#213">口座番号</a>&nbsp;</td>
+	<td><a href="#219">口座番号</a>&nbsp;</td>
 	<td>ACCOUNT_NO&nbsp;</td>
 	<td>varchar(7)&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -148,7 +148,7 @@ function asd() {
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#215">振込先金融機関コード</a>&nbsp;</td>
+	<td><a href="#221">振込先金融機関コード</a>&nbsp;</td>
 	<td>TRANSFER_TO_FINANCIAL_CODE&nbsp;</td>
 	<td>varchar(4)&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -157,7 +157,7 @@ function asd() {
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#216">振込先支店ID</a>&nbsp;</td>
+	<td><a href="#222">振込先支店ID</a>&nbsp;</td>
 	<td>TRANSFER_TO_BRANCHI_ID&nbsp;</td>
 	<td>varchar(6)&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -166,7 +166,7 @@ function asd() {
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#217">振込先口座番号</a>&nbsp;</td>
+	<td><a href="#223">振込先口座番号</a>&nbsp;</td>
 	<td>TRANSFER_TO_ACCOUNT_NO&nbsp;</td>
 	<td>varchar(7)&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -175,7 +175,7 @@ function asd() {
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#218">金額</a>&nbsp;</td>
+	<td><a href="#224">金額</a>&nbsp;</td>
 	<td>AMOUNT&nbsp;</td>
 	<td>decimal&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -184,7 +184,7 @@ function asd() {
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#219">振込取引日</a>&nbsp;</td>
+	<td><a href="#225">振込取引日</a>&nbsp;</td>
 	<td>TRANSFER_TRADE_DAY&nbsp;</td>
 	<td>varchar(8)&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -193,7 +193,7 @@ function asd() {
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#220">手数料</a>&nbsp;</td>
+	<td><a href="#226">手数料</a>&nbsp;</td>
 	<td>FEE&nbsp;</td>
 	<td>decimal&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -202,7 +202,7 @@ function asd() {
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#221">最終更新日時</a>&nbsp;</td>
+	<td><a href="#227">最終更新日時</a>&nbsp;</td>
 	<td>LAST_UPDATED_AT&nbsp;</td>
 	<td>timestamp(29)&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -211,7 +211,7 @@ function asd() {
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#222">バージョン</a>&nbsp;</td>
+	<td><a href="#228">バージョン</a>&nbsp;</td>
 	<td>VER&nbsp;</td>
 	<td>int&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -240,36 +240,36 @@ function asd() {
 		<th width="12%">子の多重度</th>
 	</tr>
 	<tr>
-	<td><a href="#210">ユーザID&nbsp;</a></td>
+	<td><a href="#216">ユーザID&nbsp;</a></td>
 	<td><a href="../table/18.html">普通預金&nbsp;</a></td>
-	<td><a href="../table/18.html#110">ユーザID&nbsp;</a></td>
+	<td><a href="../table/18.html#113">ユーザID&nbsp;</a></td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">1&nbsp;</td>
 	<td align="center">1..n&nbsp;</td>
 </tr>
 <tr>
-	<td><a href="#211">金融機関コード&nbsp;</a></td>
+	<td><a href="#217">金融機関コード&nbsp;</a></td>
 	<td><a href="../table/18.html">普通預金&nbsp;</a></td>
-	<td><a href="../table/18.html#84">金融機関コード&nbsp;</a></td>
+	<td><a href="../table/18.html#87">金融機関コード&nbsp;</a></td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">1&nbsp;</td>
 	<td align="center">1..n&nbsp;</td>
 </tr>
 <tr>
-	<td><a href="#212">支店ID&nbsp;</a></td>
+	<td><a href="#218">支店ID&nbsp;</a></td>
 	<td><a href="../table/18.html">普通預金&nbsp;</a></td>
-	<td><a href="../table/18.html#85">支店ID&nbsp;</a></td>
+	<td><a href="../table/18.html#88">支店ID&nbsp;</a></td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">1&nbsp;</td>
 	<td align="center">1..n&nbsp;</td>
 </tr>
 <tr>
-	<td><a href="#213">口座番号&nbsp;</a></td>
+	<td><a href="#219">口座番号&nbsp;</a></td>
 	<td><a href="../table/18.html">普通預金&nbsp;</a></td>
-	<td><a href="../table/18.html#111">口座番号&nbsp;</a></td>
+	<td><a href="../table/18.html#114">口座番号&nbsp;</a></td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">1&nbsp;</td>
@@ -417,7 +417,7 @@ function asd() {
 	</tr>
 </table>
 
-<a name="214"></a>
+<a name="220"></a>
 <h3><img src="../image/icons/pkey.gif">  取引ID</h3>
 
 <dl>
@@ -438,7 +438,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="210"></a>
+<a name="216"></a>
 <h3><img src="../image/icons/pkey.gif"> <img src="../image/icons/foreign_key.gif"> ユーザID</h3>
 
 <dl>
@@ -459,7 +459,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="211"></a>
+<a name="217"></a>
 <h3><img src="../image/icons/pkey.gif"> <img src="../image/icons/foreign_key.gif"> 金融機関コード</h3>
 
 <dl>
@@ -480,7 +480,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="212"></a>
+<a name="218"></a>
 <h3><img src="../image/icons/pkey.gif"> <img src="../image/icons/foreign_key.gif"> 支店ID</h3>
 
 <dl>
@@ -501,7 +501,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="213"></a>
+<a name="219"></a>
 <h3><img src="../image/icons/pkey.gif"> <img src="../image/icons/foreign_key.gif"> 口座番号</h3>
 
 <dl>
@@ -522,7 +522,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="215"></a>
+<a name="221"></a>
 <h3>  振込先金融機関コード</h3>
 
 <dl>
@@ -543,7 +543,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="216"></a>
+<a name="222"></a>
 <h3>  振込先支店ID</h3>
 
 <dl>
@@ -564,7 +564,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="217"></a>
+<a name="223"></a>
 <h3>  振込先口座番号</h3>
 
 <dl>
@@ -585,7 +585,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="218"></a>
+<a name="224"></a>
 <h3>  金額</h3>
 
 <dl>
@@ -606,7 +606,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="219"></a>
+<a name="225"></a>
 <h3>  振込取引日</h3>
 
 <dl>
@@ -627,7 +627,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="220"></a>
+<a name="226"></a>
 <h3>  手数料</h3>
 
 <dl>
@@ -648,7 +648,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="221"></a>
+<a name="227"></a>
 <h3>  最終更新日時</h3>
 
 <dl>
@@ -669,7 +669,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="222"></a>
+<a name="228"></a>
 <h3>  バージョン</h3>
 
 <dl>

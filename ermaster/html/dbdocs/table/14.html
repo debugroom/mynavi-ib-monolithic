@@ -103,7 +103,7 @@ function asd() {
 	<tr>
 	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#188">取引ID</a>&nbsp;</td>
+	<td><a href="#193">取引ID</a>&nbsp;</td>
 	<td>TRADE_ID&nbsp;</td>
 	<td>varchar(128)&nbsp;</td>
 	<td align="center">UNIQUE&nbsp;</td>
@@ -112,7 +112,7 @@ function asd() {
 <tr>
 	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
 	<td align="center"><img src="../image/icons/foreign_key.gif">&nbsp;</td>
-	<td><a href="#179">ユーザID</a>&nbsp;</td>
+	<td><a href="#184">ユーザID</a>&nbsp;</td>
 	<td>USER_ID&nbsp;</td>
 	<td>varchar(8)&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -121,7 +121,7 @@ function asd() {
 <tr>
 	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
 	<td align="center"><img src="../image/icons/foreign_key.gif">&nbsp;</td>
-	<td><a href="#180">金融機関コード</a>&nbsp;</td>
+	<td><a href="#185">金融機関コード</a>&nbsp;</td>
 	<td>FINANCIAL_CODE&nbsp;</td>
 	<td>varchar(4)&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -130,7 +130,7 @@ function asd() {
 <tr>
 	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
 	<td align="center"><img src="../image/icons/foreign_key.gif">&nbsp;</td>
-	<td><a href="#181">支店ID</a>&nbsp;</td>
+	<td><a href="#186">支店ID</a>&nbsp;</td>
 	<td>BRANCH_ID&nbsp;</td>
 	<td>varchar(6)&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -139,7 +139,7 @@ function asd() {
 <tr>
 	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
 	<td align="center"><img src="../image/icons/foreign_key.gif">&nbsp;</td>
-	<td><a href="#182">口座番号</a>&nbsp;</td>
+	<td><a href="#187">口座番号</a>&nbsp;</td>
 	<td>ACCOUNT_NO&nbsp;</td>
 	<td>varchar(7)&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -148,7 +148,7 @@ function asd() {
 <tr>
 	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
 	<td align="center"><img src="../image/icons/foreign_key.gif">&nbsp;</td>
-	<td><a href="#183">ファンド口座番号</a>&nbsp;</td>
+	<td><a href="#188">ファンド口座番号</a>&nbsp;</td>
 	<td>FUND_ACCOUNT_NO&nbsp;</td>
 	<td>varchar(7)&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -157,7 +157,7 @@ function asd() {
 <tr>
 	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
 	<td align="center"><img src="../image/icons/foreign_key.gif">&nbsp;</td>
-	<td><a href="#168">ファンドID</a>&nbsp;</td>
+	<td><a href="#173">ファンドID</a>&nbsp;</td>
 	<td>FUND_ID&nbsp;</td>
 	<td>varchar(8)&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -166,7 +166,16 @@ function asd() {
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#189">金額</a>&nbsp;</td>
+	<td><a href="#194">購入タイプ</a>&nbsp;</td>
+	<td>ORDER_TYPE&nbsp;</td>
+	<td>varchar(50)&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td align="center">&nbsp;</td>
+</tr>
+<tr>
+	<td align="center">&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td><a href="#195">金額</a>&nbsp;</td>
 	<td>AMOUNT&nbsp;</td>
 	<td>decimal&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -175,7 +184,7 @@ function asd() {
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#190">取引開始日時</a>&nbsp;</td>
+	<td><a href="#196">取引開始日時</a>&nbsp;</td>
 	<td>TRADE_START_DATE&nbsp;</td>
 	<td>timestamp(29)&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -184,7 +193,7 @@ function asd() {
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#191">最終更新日時</a>&nbsp;</td>
+	<td><a href="#197">最終更新日時</a>&nbsp;</td>
 	<td>LAST_UPDATED_AT&nbsp;</td>
 	<td>timestamp(29)&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -213,54 +222,54 @@ function asd() {
 		<th width="12%">子の多重度</th>
 	</tr>
 	<tr>
-	<td><a href="#179">ユーザID&nbsp;</a></td>
+	<td><a href="#184">ユーザID&nbsp;</a></td>
 	<td><a href="../table/12.html">ファンド口座&nbsp;</a></td>
-	<td><a href="../table/12.html#170">ユーザID&nbsp;</a></td>
+	<td><a href="../table/12.html#175">ユーザID&nbsp;</a></td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">1&nbsp;</td>
 	<td align="center">1..n&nbsp;</td>
 </tr>
 <tr>
-	<td><a href="#180">金融機関コード&nbsp;</a></td>
+	<td><a href="#185">金融機関コード&nbsp;</a></td>
 	<td><a href="../table/12.html">ファンド口座&nbsp;</a></td>
-	<td><a href="../table/12.html#171">金融機関コード&nbsp;</a></td>
+	<td><a href="../table/12.html#176">金融機関コード&nbsp;</a></td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">1&nbsp;</td>
 	<td align="center">1..n&nbsp;</td>
 </tr>
 <tr>
-	<td><a href="#181">支店ID&nbsp;</a></td>
+	<td><a href="#186">支店ID&nbsp;</a></td>
 	<td><a href="../table/12.html">ファンド口座&nbsp;</a></td>
-	<td><a href="../table/12.html#172">支店ID&nbsp;</a></td>
+	<td><a href="../table/12.html#177">支店ID&nbsp;</a></td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">1&nbsp;</td>
 	<td align="center">1..n&nbsp;</td>
 </tr>
 <tr>
-	<td><a href="#182">口座番号&nbsp;</a></td>
+	<td><a href="#187">口座番号&nbsp;</a></td>
 	<td><a href="../table/12.html">ファンド口座&nbsp;</a></td>
-	<td><a href="../table/12.html#173">口座番号&nbsp;</a></td>
+	<td><a href="../table/12.html#178">口座番号&nbsp;</a></td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">1&nbsp;</td>
 	<td align="center">1..n&nbsp;</td>
 </tr>
 <tr>
-	<td><a href="#183">ファンド口座番号&nbsp;</a></td>
+	<td><a href="#188">ファンド口座番号&nbsp;</a></td>
 	<td><a href="../table/12.html">ファンド口座&nbsp;</a></td>
-	<td><a href="../table/12.html#174">ファンド口座番号&nbsp;</a></td>
+	<td><a href="../table/12.html#179">ファンド口座番号&nbsp;</a></td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">1&nbsp;</td>
 	<td align="center">1..n&nbsp;</td>
 </tr>
 <tr>
-	<td><a href="#168">ファンドID&nbsp;</a></td>
+	<td><a href="#173">ファンドID&nbsp;</a></td>
 	<td><a href="../table/11.html">ファンド&nbsp;</a></td>
-	<td><a href="../table/11.html#96">ファンドID&nbsp;</a></td>
+	<td><a href="../table/11.html#99">ファンドID&nbsp;</a></td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">1&nbsp;</td>
@@ -342,7 +351,7 @@ function asd() {
 	</tr>
 </table>
 
-<a name="188"></a>
+<a name="193"></a>
 <h3><img src="../image/icons/pkey.gif">  取引ID</h3>
 
 <dl>
@@ -363,7 +372,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="179"></a>
+<a name="184"></a>
 <h3><img src="../image/icons/pkey.gif"> <img src="../image/icons/foreign_key.gif"> ユーザID</h3>
 
 <dl>
@@ -384,7 +393,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="180"></a>
+<a name="185"></a>
 <h3><img src="../image/icons/pkey.gif"> <img src="../image/icons/foreign_key.gif"> 金融機関コード</h3>
 
 <dl>
@@ -405,7 +414,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="181"></a>
+<a name="186"></a>
 <h3><img src="../image/icons/pkey.gif"> <img src="../image/icons/foreign_key.gif"> 支店ID</h3>
 
 <dl>
@@ -426,7 +435,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="182"></a>
+<a name="187"></a>
 <h3><img src="../image/icons/pkey.gif"> <img src="../image/icons/foreign_key.gif"> 口座番号</h3>
 
 <dl>
@@ -447,7 +456,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="183"></a>
+<a name="188"></a>
 <h3><img src="../image/icons/pkey.gif"> <img src="../image/icons/foreign_key.gif"> ファンド口座番号</h3>
 
 <dl>
@@ -468,7 +477,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="168"></a>
+<a name="173"></a>
 <h3><img src="../image/icons/pkey.gif"> <img src="../image/icons/foreign_key.gif"> ファンドID</h3>
 
 <dl>
@@ -489,7 +498,28 @@ function asd() {
 <p>
 
 <hr>
-<a name="189"></a>
+<a name="194"></a>
+<h3>  購入タイプ</h3>
+
+<dl>
+	<dd>ORDER_TYPE
+	<p>
+	<dd><pre></pre>
+	<p>
+	<dl>
+		<dt><b>UNIQUE : </b>FALSE<br></dt>
+		<dt><b>NOT NULL : </b>FALSE<br></dt>
+		<dt><b>型 : </b>varchar(50)<br></dt>
+		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
+		<dt><b>デフォルト値 : </b><br></dt>
+		<dt><b>制約 : </b><br></dt>
+	</dl>
+</dl>
+
+<p>
+
+<hr>
+<a name="195"></a>
 <h3>  金額</h3>
 
 <dl>
@@ -510,7 +540,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="190"></a>
+<a name="196"></a>
 <h3>  取引開始日時</h3>
 
 <dl>
@@ -531,7 +561,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="191"></a>
+<a name="197"></a>
 <h3>  最終更新日時</h3>
 
 <dl>
