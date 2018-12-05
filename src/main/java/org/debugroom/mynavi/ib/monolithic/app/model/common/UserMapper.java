@@ -20,10 +20,25 @@ public interface UserMapper {
                         .toLocalDateTime().atZone(
                                 ZoneId.of(ZoneId.SHORT_IDS.get(
                                         AppConsts.TIMEZONE_SHORT_ID))))
-                .savingsAccounts(entity.getSavingsAccountsByUserId()
-                        .stream().map(SavingsAccountMapper::createFromEntity)
-                        .collect(Collectors.toList()))
                 .build();
+    }
+
+    public static User createByEntityWithSavingsAccounts(
+            org.debugroom.mynavi.ib.monolithic.domain.model.entity.User entity){
+        User user = createByEntity(entity);
+        user.setSavingsAccounts(entity.getSavingsAccountsByUserId()
+        .stream().map(SavingsAccountMapper::createFromEntity)
+        .collect(Collectors.toList()));
+        return user;
+    }
+
+    public static User createByEntityWithCredentials(
+            org.debugroom.mynavi.ib.monolithic.domain.model.entity.User entity){
+        User user = createByEntity(entity);
+        user.setCredentials(entity.getCredentialsByUserId().stream()
+        .map(CredentialMapper::createByEntity)
+        .collect(Collectors.toList()));
+        return user;
     }
 
 }

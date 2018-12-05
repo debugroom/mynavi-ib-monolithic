@@ -1,6 +1,7 @@
 package org.debugroom.mynavi.ib.monolithic.domain.model.entity;
 
 import javax.persistence.*;
+import java.math.BigInteger;
 import java.sql.Timestamp;
 import java.util.Collection;
 import java.util.Objects;
@@ -141,7 +142,6 @@ public class FixedDepositAccount {
 
     @Override
     public int hashCode() {
-
         return Objects.hash(userId, financialCode, branchId, accountNo, cifNo, fixedAccountNo, accountType, accountStartDate, lastUpdatedAt, ver);
     }
 
@@ -166,4 +166,23 @@ public class FixedDepositAccount {
     public void setSavingsAccount(SavingsAccount savingsAccount) {
         this.savingsAccount = savingsAccount;
     }
+
+    public void addFixedDeposit(FixedDeposit addFixedDeposit){
+        getFixedDeposits().add(addFixedDeposit);
+    }
+
+    public void cancelFixedDeposit(FixedDeposit cancelFixedDeposit){
+        FixedDeposit canxelTargetFixedDeposit = getFixedDeposits().stream()
+                .filter(fixedDeposit ->
+                        cancelFixedDeposit.getTradeId().equals(fixedDeposit.getTradeId()))
+                .findFirst()
+                .get();
+        cancelFixedDeposit.setTransactionStatus("CANCELED");
+        SavingsAccount savingsAccount = getSavingsAccount();
+        savingsAccount.setTotalAmount(savingsAccount.getTotalAmount()
+                .add(cancelFixedDeposit.getBalance())
+        );
+    }
+
+
 }

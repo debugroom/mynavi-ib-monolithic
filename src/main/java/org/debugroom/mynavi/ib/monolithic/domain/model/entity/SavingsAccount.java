@@ -3,8 +3,10 @@ package org.debugroom.mynavi.ib.monolithic.domain.model.entity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
+import org.debugroom.mynavi.ib.monolithic.apinfra.exception.BusinessException;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.sql.Timestamp;
 import java.util.Collection;
@@ -29,11 +31,11 @@ public class SavingsAccount {
     private Integer ver;
     private Collection<Deposit> deposits;
     private Collection<FixedDepositAccount> fixedDepositAccounts;
-    private Collection<ForeignCurrencyDepositAccout> foreignCurrencyDepositAccouts;
     private Collection<FundAccount> fundAccounts;
-    private User usrByUserId;
+    private User userByUserId;
     private Branch branch;
     private Collection<Transfer> transfers;
+    private Collection<ForeignCurrencyDepositAccount> foreignCurrencyDepositAccounts;
 
     @Id
     @Column(name = "user_id", nullable = false, length = 8)
@@ -177,15 +179,6 @@ public class SavingsAccount {
     }
 
     @OneToMany(mappedBy = "savingsAccount")
-    public Collection<ForeignCurrencyDepositAccout> getForeignCurrencyDepositAccouts() {
-        return foreignCurrencyDepositAccouts;
-    }
-
-    public void setForeignCurrencyDepositAccouts(Collection<ForeignCurrencyDepositAccout> foreignCurrencyDepositAccouts) {
-        this.foreignCurrencyDepositAccouts = foreignCurrencyDepositAccouts;
-    }
-
-    @OneToMany(mappedBy = "savingsAccount")
     public Collection<FundAccount> getFundAccounts() {
         return fundAccounts;
     }
@@ -196,12 +189,12 @@ public class SavingsAccount {
 
     @ManyToOne
     @JoinColumns({@JoinColumn(name = "user_id", referencedColumnName = "user_id", nullable = false, insertable = false, updatable = false)})
-    public User getUsrByUserId() {
-        return usrByUserId;
+    public User getUserByUserId() {
+        return userByUserId;
     }
 
-    public void setUsrByUserId(User usrByUserId) {
-        this.usrByUserId = usrByUserId;
+    public void setUserByUserId(User userByUserId) {
+        this.userByUserId = userByUserId;
     }
 
     @ManyToOne
@@ -223,4 +216,33 @@ public class SavingsAccount {
     public void setTransfers(Collection<Transfer> transfers) {
         this.transfers = transfers;
     }
+
+    @OneToMany(mappedBy = "savingsAccount")
+    public Collection<ForeignCurrencyDepositAccount> getForeignCurrencyDepositAccounts() {
+        return foreignCurrencyDepositAccounts;
+    }
+
+    public void setForeignCurrencyDepositAccounts(Collection<ForeignCurrencyDepositAccount> foreignCurrencyDepositAccounts) {
+        this.foreignCurrencyDepositAccounts = foreignCurrencyDepositAccounts;
+    }
+
+    public void addDeposit(Deposit deposit){
+        getDeposits().add(deposit);
+        addTotalAmount(deposit.getBalance());
+    }
+
+    public void addTotalAmount(BigInteger addMoney){
+        setTotalAmount(getTotalAmount().add(addMoney));
+    }
+
+    public void subtractTotalAmount(BigInteger subtractMoney)
+            throws BusinessException {
+        if(getTotalAmount().compareTo(subtractMoney) < 0){
+            throw new BusinessException("error.ordinary.deposit.0002",
+                    "Insufficient balance for transfer order in finacode: [1], branch: [2], account: [3]",
+                    financialCode, branchId, accountNo);
+        }
+        setTotalAmount(getTotalAmount().subtract(subtractMoney));
+    }
+
 }

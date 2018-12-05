@@ -14,7 +14,6 @@ public class Credential {
     private Timestamp lastUpdatedAt;
     private Integer ver;
     private User userByUserId;
-    private User usrByUserId;
 
     @Id
     @Column(name = "user_id", nullable = false, length = 8)
@@ -80,12 +79,11 @@ public class Credential {
 
     @Override
     public int hashCode() {
-
         return Objects.hash(userId, credentialKeyType, credentialKey, lastUpdatedAt, ver);
     }
 
     @ManyToOne
-    @JoinColumn(name = "user_id", referencedColumnName = "user_id", nullable = false, insertable = false, updatable = false)
+    @JoinColumns({@JoinColumn(name = "user_id", referencedColumnName = "user_id", nullable = false, insertable = false, updatable = false)})
     public User getUserByUserId() {
         return userByUserId;
     }
@@ -94,13 +92,4 @@ public class Credential {
         this.userByUserId = userByUserId;
     }
 
-    @ManyToOne
-    @JoinColumn(name = "user_id", referencedColumnName = "user_id", nullable = false, insertable = false, updatable = false)
-    public User getUsrByUserId() {
-        return usrByUserId;
-    }
-
-    public void setUsrByUserId(User usrByUserId) {
-        this.usrByUserId = usrByUserId;
-    }
 }

@@ -11,7 +11,8 @@ import org.debugroom.mynavi.ib.monolithic.app.AppConsts;
 
 public interface SavingsAccountMapper {
 
-    public static SavingsAccount createFromEntity(org.debugroom.mynavi.ib.monolithic.domain.model.entity.SavingsAccount entity){
+    public static SavingsAccount createFromEntity(
+            org.debugroom.mynavi.ib.monolithic.domain.model.entity.SavingsAccount entity){
         return SavingsAccount.builder()
                 .userId(entity.getUserId())
                 .financialCode(entity.getFinancialCode())

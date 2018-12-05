@@ -21,6 +21,8 @@ public class FundOrder {
     private Timestamp lastUpdatedAt;
     private FundAccount fundAccount;
     private Fund fundByFundId;
+    private String orderType;
+    private String transactionStatus;
 
     @Id
     @Column(name = "trade_id", nullable = false, length = 128)
@@ -160,12 +162,32 @@ public class FundOrder {
     }
 
     @ManyToOne
-    @JoinColumn(name = "fund_id", referencedColumnName = "fund_id", nullable = false, insertable = false, updatable = false)
+    @JoinColumns({@JoinColumn(name = "fund_id", referencedColumnName = "fund_id", nullable = false, insertable = false, updatable = false)})
     public Fund getFundByFundId() {
         return fundByFundId;
     }
 
     public void setFundByFundId(Fund fundByFundId) {
         this.fundByFundId = fundByFundId;
+    }
+
+    @Basic
+    @Column(name = "order_type", nullable = true, length = 50)
+    public String getOrderType() {
+        return orderType;
+    }
+
+    public void setOrderType(String orderType) {
+        this.orderType = orderType;
+    }
+
+    @Basic
+    @Column(name = "transaction_status", nullable = true, length = 50)
+    public String getTransactionStatus() {
+        return transactionStatus;
+    }
+
+    public void setTransactionStatus(String transactionStatus) {
+        this.transactionStatus = transactionStatus;
     }
 }

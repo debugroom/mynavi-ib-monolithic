@@ -21,7 +21,9 @@ public class ForeignCurrencyDeposit {
     private BigInteger ratio;
     private Timestamp lastUpdatedAt;
     private Integer ver;
-    private ForeignCurrencyDepositAccout foreignCurrencyDepositAccout;
+    private String foreignCurrencyDepositType;
+    private ForeignCurrencyDepositAccount foreignCurrencyDepositAccount;
+    private String transactionStatus;
 
     @Id
     @Column(name = "trade_id", nullable = false, length = 128)
@@ -168,17 +170,37 @@ public class ForeignCurrencyDeposit {
         return Objects.hash(tradeId, userId, financialCode, branchId, accountNo, foreignCurrencyAccountNo, balance, tradeStartDate, maturityDay, ratio, lastUpdatedAt, ver);
     }
 
-    @ManyToOne
-    @JoinColumns({@JoinColumn(name = "user_id", referencedColumnName = "user_id", nullable = false, updatable = false, insertable = false),
-            @JoinColumn(name = "financial_code", referencedColumnName = "financial_code", nullable = false, insertable = false, updatable = false),
-            @JoinColumn(name = "branch_id", referencedColumnName = "branch_id", nullable = false, insertable = false, updatable = false),
-            @JoinColumn(name = "account_no", referencedColumnName = "account_no", nullable = false, insertable = false, updatable = false),
-            @JoinColumn(name = "foreign_currency_account_no", referencedColumnName = "foreign_currency_account_no", nullable = false, insertable = false, updatable = false)})
-    public ForeignCurrencyDepositAccout getForeignCurrencyDepositAccout() {
-        return foreignCurrencyDepositAccout;
+    @Basic
+    @Column(name = "foreign_currency_deposit_type", nullable = true, length = 50)
+    public String getForeignCurrencyDepositType() {
+        return foreignCurrencyDepositType;
     }
 
-    public void setForeignCurrencyDepositAccout(ForeignCurrencyDepositAccout foreignCurrencyDepositAccout) {
-        this.foreignCurrencyDepositAccout = foreignCurrencyDepositAccout;
+    public void setForeignCurrencyDepositType(String foreignCurrencyDepositType) {
+        this.foreignCurrencyDepositType = foreignCurrencyDepositType;
+    }
+
+    @ManyToOne
+    @JoinColumns({@JoinColumn(name = "user_id", referencedColumnName = "user_id", nullable = false, insertable = false, updatable = false),
+            @JoinColumn(name = "financial_code", referencedColumnName = "financial_code", nullable = false, insertable = false, updatable = false),
+            @JoinColumn(name = "branch_id", referencedColumnName = "branch_id", nullable = false, insertable = false, updatable = false),
+            @JoinColumn(name = "account_no", referencedColumnName = "account_no", nullable = false,  insertable = false, updatable = false),
+            @JoinColumn(name = "foreign_currency_account_no", referencedColumnName = "foreign_currency_account_no", nullable = false, insertable = false, updatable = false)})
+    public ForeignCurrencyDepositAccount getForeignCurrencyDepositAccount() {
+        return foreignCurrencyDepositAccount;
+    }
+
+    public void setForeignCurrencyDepositAccount(ForeignCurrencyDepositAccount foreignCurrencyDepositAccount) {
+        this.foreignCurrencyDepositAccount = foreignCurrencyDepositAccount;
+    }
+
+    @Basic
+    @Column(name = "transaction_status", nullable = true, length = 50)
+    public String getTransactionStatus() {
+        return transactionStatus;
+    }
+
+    public void setTransactionStatus(String transactionStatus) {
+        this.transactionStatus = transactionStatus;
     }
 }

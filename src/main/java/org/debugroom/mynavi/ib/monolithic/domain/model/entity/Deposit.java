@@ -17,6 +17,7 @@ public class Deposit {
     private Timestamp lastUpdatedAt;
     private Integer ver;
     private SavingsAccount savingsAccount;
+    private String transactionStatus;
 
     @Id
     @Column(name = "trade_id", nullable = false, length = 128)
@@ -115,7 +116,6 @@ public class Deposit {
 
     @Override
     public int hashCode() {
-
         return Objects.hash(tradeId, userId, financialCode, branchId, accountNo, balance, lastUpdatedAt, ver);
     }
 
@@ -130,5 +130,15 @@ public class Deposit {
 
     public void setSavingsAccount(SavingsAccount savingsAccount) {
         this.savingsAccount = savingsAccount;
+    }
+
+    @Basic
+    @Column(name = "transaction_status", nullable = true, length = 50)
+    public String getTransactionStatus() {
+        return transactionStatus;
+    }
+
+    public void setTransactionStatus(String transactionStatus) {
+        this.transactionStatus = transactionStatus;
     }
 }

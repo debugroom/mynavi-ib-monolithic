@@ -8,6 +8,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.debugroom.mynavi.ib.monolithic.app.model.common.Status;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -21,6 +22,7 @@ public class Deposit implements Serializable {
     private String branchId;
     private String accountNo;
     private BigDecimal balance;
+    private Status transactionStatus;
     private ZonedDateTime lastUpdatedAt;
 
 }

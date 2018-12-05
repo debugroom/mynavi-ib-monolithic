@@ -15,7 +15,6 @@ public class AnswerOfUser {
     private Integer ver;
     private RiskAnswer riskAnswer;
     private User userByUserId;
-    private User usrByUserId;
 
     @Id
     @Column(name = "question_id", nullable = false, length = 4)
@@ -97,7 +96,7 @@ public class AnswerOfUser {
     }
 
     @ManyToOne
-    @JoinColumn(name = "user_id", referencedColumnName = "user_id", nullable = false, insertable = false, updatable = false)
+    @JoinColumns({@JoinColumn(name = "user_id", referencedColumnName = "user_id", nullable = false, insertable = false, updatable = false)})
     public User getUserByUserId() {
         return userByUserId;
     }
@@ -106,13 +105,4 @@ public class AnswerOfUser {
         this.userByUserId = userByUserId;
     }
 
-    @ManyToOne
-    @JoinColumn(name = "user_id", referencedColumnName = "user_id", nullable = false, insertable = false, updatable = false)
-    public User getUsrByUserId() {
-        return usrByUserId;
-    }
-
-    public void setUsrByUserId(User usrByUserId) {
-        this.usrByUserId = usrByUserId;
-    }
 }

@@ -25,6 +25,7 @@ public class User implements Serializable {
     private ZonedDateTime lastUpdatedAt;
     private List<Credential> credentials;
     private List<SavingsAccount> savingsAccounts;
+    private List<AnswerOfUser> riskAnswers;
 
     public static User createFromEntity(org.debugroom.mynavi.ib.monolithic.domain.model.entity.User entity){
         return UserMapper.createByEntity(entity);

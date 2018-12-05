@@ -20,6 +20,7 @@ public class FundAccount {
     private Integer ver;
     private SavingsAccount savingsAccount;
     private Collection<FundOrder> fundOrders;
+    private String cifNo;
 
     @Id
     @Column(name = "user_id", nullable = false, length = 8)
@@ -153,5 +154,15 @@ public class FundAccount {
 
     public void setFundOrders(Collection<FundOrder> fundOrders) {
         this.fundOrders = fundOrders;
+    }
+
+    @Basic
+    @Column(name = "cif_no", nullable = true, length = 7)
+    public String getCifNo() {
+        return cifNo;
+    }
+
+    public void setCifNo(String cifNo) {
+        this.cifNo = cifNo;
     }
 }

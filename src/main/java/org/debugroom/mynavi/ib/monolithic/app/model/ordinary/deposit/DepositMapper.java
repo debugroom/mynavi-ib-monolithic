@@ -4,6 +4,8 @@ import java.math.BigDecimal;
 import java.time.ZoneId;
 
 import org.debugroom.mynavi.ib.monolithic.app.AppConsts;
+import org.debugroom.mynavi.ib.monolithic.app.model.common.Status;
+import org.debugroom.mynavi.ib.monolithic.app.model.common.TransactionStatus;
 
 public interface DepositMapper {
 
@@ -15,6 +17,7 @@ public interface DepositMapper {
                 .branchId(entity.getBranchId())
                 .accountNo(entity.getAccountNo())
                 .balance(new BigDecimal(entity.getBalance()))
+                .transactionStatus(TransactionStatus.valueOf(entity.getTransactionStatus()))
                 .lastUpdatedAt(entity.getLastUpdatedAt()
                         .toLocalDateTime().atZone(
                                 ZoneId.of(ZoneId.SHORT_IDS.get(

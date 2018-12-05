@@ -29,6 +29,7 @@ public class Transfer {
     private String transferToFinancialCode;
     private String transferToBranchiId;
     private String transferToAccountNo;
+    private String transactionStatus;
 
     @Id
     @Column(name = "trade_id", nullable = false, length = 128)
@@ -194,5 +195,15 @@ public class Transfer {
 
     public void setTransferToAccountNo(String transferToAccountNo) {
         this.transferToAccountNo = transferToAccountNo;
+    }
+
+    @Basic
+    @Column(name = "transaction_status", nullable = true, length = 50)
+    public String getTransactionStatus() {
+        return transactionStatus;
+    }
+
+    public void setTransactionStatus(String transactionStatus) {
+        this.transactionStatus = transactionStatus;
     }
 }

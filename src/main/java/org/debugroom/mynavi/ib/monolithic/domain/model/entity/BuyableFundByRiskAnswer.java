@@ -108,7 +108,7 @@ public class BuyableFundByRiskAnswer {
     }
 
     @ManyToOne
-    @JoinColumn(name = "fund_id", referencedColumnName = "fund_id", nullable = false, insertable = false, updatable = false)
+    @JoinColumns({@JoinColumn(name = "fund_id", referencedColumnName = "fund_id", nullable = false, insertable = false, updatable = false)})
     public Fund getFundByFundId() {
         return fundByFundId;
     }

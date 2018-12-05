@@ -15,10 +15,24 @@ logging:
               BasicBinder: trace
           EnumType: trace
 app:
-  credential:
-    secondary:
-      password:
-        logical:
-          name: SecondaryPassword
+domain:
+  transfer:
+    fee:
+      high:
+        for:
+          other:
+            financial:
+              Institution: 432
+          same:
+            financial:
+              Institution: 216
+      low:
+        for:
+          other:
+            financial:
+              Institution: 216
+          same:
+            financial:
+              Institution: 108
 
 

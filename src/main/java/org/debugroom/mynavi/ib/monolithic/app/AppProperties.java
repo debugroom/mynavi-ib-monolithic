@@ -8,6 +8,6 @@ import lombok.Data;
 @ConfigurationProperties(prefix="app")
 public class AppProperties {
 
-    private String credentialSecondaryPasswordLogicalName;
+    private final String credentialSecondaryPasswordLogicalName;
 
 }

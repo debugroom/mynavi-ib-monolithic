@@ -3,11 +3,15 @@ package org.debugroom.mynavi.ib.monolithic.domain.model.entity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
+import org.debugroom.mynavi.ib.monolithic.app.AppConsts;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -26,7 +30,6 @@ public class User {
     private Collection<AnswerOfUser> answerOfUsersByUserId;
     private Collection<Credential> credentialsByUserId;
     private Collection<SavingsAccount> savingsAccountsByUserId;
-    private Collection<Credential> credntialsByUserId;
 
     @Id
     @Column(name = "user_id", nullable = false, length = 8)
@@ -129,7 +132,7 @@ public class User {
         return Objects.hash(userId, firstName, lastName, loginId, birthday, sex, lastUpdatedAt, ver);
     }
 
-    @OneToMany(mappedBy = "usrByUserId")
+    @OneToMany(mappedBy = "userByUserId")
     public Collection<AnswerOfUser> getAnswerOfUsersByUserId() {
         return answerOfUsersByUserId;
     }
@@ -147,7 +150,7 @@ public class User {
         this.credentialsByUserId = credentialsByUserId;
     }
 
-    @OneToMany(mappedBy = "usrByUserId")
+    @OneToMany(mappedBy = "userByUserId")
     public Collection<SavingsAccount> getSavingsAccountsByUserId() {
         return savingsAccountsByUserId;
     }
@@ -156,12 +159,23 @@ public class User {
         this.savingsAccountsByUserId = savingsAccountsByUserId;
     }
 
-    @OneToMany(mappedBy = "usrByUserId")
-    public Collection<Credential> getCredntialsByUserId() {
-        return credntialsByUserId;
+    public Credential findSecondaryPassword(){
+        return getCredentialsByUserId().stream().filter(credential ->
+                AppConsts.CREDENTIAL_SECONDARY_PASSWORD_LOGICAL_NAME.equals(
+                        credential.getCredentialKey())).findFirst().get();
     }
 
-    public void setCredntialsByUserId(Collection<Credential> credntialsByUserId) {
-        this.credntialsByUserId = credntialsByUserId;
+    public RiskAnswer inquireRiskAnswer(RiskQuestion riskQuestion){
+        return  getAnswerOfUsersByUserId().stream().filter(
+                answerOfUser -> answerOfUser.getRiskAnswer().getQuestionId()
+                .equals(riskQuestion.getQuestionId()))
+                .map(answerOfUser -> answerOfUser.getRiskAnswer()).findFirst().get();
     }
+
+    public List<RiskAnswer> inquireRiskAnswers(){
+        return getAnswerOfUsersByUserId().stream().map(
+                answerOfUser -> answerOfUser.getRiskAnswer())
+                .collect(Collectors.toList());
+    }
+
 }

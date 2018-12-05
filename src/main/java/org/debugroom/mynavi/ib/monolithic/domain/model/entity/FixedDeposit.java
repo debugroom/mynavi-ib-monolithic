@@ -1,10 +1,17 @@
 package org.debugroom.mynavi.ib.monolithic.domain.model.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 import java.math.BigInteger;
 import java.sql.Timestamp;
 import java.util.Objects;
 
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 @Entity
 @Table(name = "fixed_deposit", schema = "public", catalog = "mynavi_ib")
 @IdClass(FixedDepositPK.class)
@@ -22,6 +29,8 @@ public class FixedDeposit {
     private Timestamp lastUpdatedAt;
     private Integer ver;
     private FixedDepositAccount fixedDepositAccount;
+    private String fixedDepositType;
+    private String transactionStatus;
 
     @Id
     @Column(name = "trade_id", nullable = false, length = 128)
@@ -181,4 +190,27 @@ public class FixedDeposit {
     public void setFixedDepositAccount(FixedDepositAccount fixedDepositAccount) {
         this.fixedDepositAccount = fixedDepositAccount;
     }
+
+    @Basic
+    @Column(name = "fixed_deposit_type", nullable = true, length = 50)
+    public String getFixedDepositType() {
+        return fixedDepositType;
+    }
+
+    public void setFixedDepositType(String fixedDepositType) {
+        this.fixedDepositType = fixedDepositType;
+    }
+
+    @Basic
+    @Column(name = "transaction_status", nullable = true, length = 50)
+    public String getTransactionStatus() {
+        return transactionStatus;
+    }
+
+    public void setTransactionStatus(String transactionStatus) {
+        this.transactionStatus = transactionStatus;
+    }
+
+
+
 }
