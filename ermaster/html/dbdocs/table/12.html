@@ -2,12 +2,12 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>ファンド口座</title>
+		<title>ファンド</title>
 		<link rel="stylesheet" type="text/css" href="../stylesheet.css" title="Style">
 	</head>
 <script>
 function asd() {
-	parent.document.title="ファンド口座";
+	parent.document.title="ファンド";
 }
 </script>
 
@@ -62,13 +62,13 @@ function asd() {
 
 		<hr>
 		<a name="main"></a>
-		<h2>テーブル   ファンド口座</h2>
+		<h2>テーブル   ファンド</h2>
 		<hr>
 
 
 <dl>
 	<dt><b>物理名:</b></dt>
-		<dd>FUND_ACCOUNT<br><br></dd>
+		<dd>FUND<br><br></dd>
 </dl>
 
 <dl>
@@ -102,63 +102,45 @@ function asd() {
 	<tr>
 	<tr>
 	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
-	<td align="center"><img src="../image/icons/foreign_key.gif">&nbsp;</td>
-	<td><a href="#167">ユーザID</a>&nbsp;</td>
-	<td>USER_ID&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td><a href="#101">ファンドID</a>&nbsp;</td>
+	<td>FUND_ID&nbsp;</td>
 	<td>varchar(8)&nbsp;</td>
 	<td align="center">&nbsp;</td>
 	<td align="center">NOT NULL&nbsp;</td>
 </tr>
 <tr>
-	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td><a href="#173">ファンド名</a>&nbsp;</td>
+	<td>FUND_NAME&nbsp;</td>
+	<td>varchar(512)&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td align="center">&nbsp;</td>
+</tr>
+<tr>
+	<td align="center">&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td><a href="#174">取引開始日</a>&nbsp;</td>
+	<td>TRADE_START_DAY&nbsp;</td>
+	<td>varchar(8)&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td align="center">&nbsp;</td>
+</tr>
+<tr>
+	<td align="center">&nbsp;</td>
 	<td align="center"><img src="../image/icons/foreign_key.gif">&nbsp;</td>
-	<td><a href="#168">金融機関コード</a>&nbsp;</td>
+	<td><a href="#125">金融機関コード</a>&nbsp;</td>
 	<td>FINANCIAL_CODE&nbsp;</td>
 	<td>varchar(4)&nbsp;</td>
 	<td align="center">&nbsp;</td>
 	<td align="center">NOT NULL&nbsp;</td>
 </tr>
 <tr>
-	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
-	<td align="center"><img src="../image/icons/foreign_key.gif">&nbsp;</td>
-	<td><a href="#169">支店ID</a>&nbsp;</td>
-	<td>BRANCH_ID&nbsp;</td>
-	<td>varchar(6)&nbsp;</td>
-	<td align="center">&nbsp;</td>
-	<td align="center">NOT NULL&nbsp;</td>
-</tr>
-<tr>
-	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
-	<td align="center"><img src="../image/icons/foreign_key.gif">&nbsp;</td>
-	<td><a href="#170">口座番号</a>&nbsp;</td>
-	<td>ACCOUNT_NO&nbsp;</td>
-	<td>varchar(7)&nbsp;</td>
-	<td align="center">&nbsp;</td>
-	<td align="center">NOT NULL&nbsp;</td>
-</tr>
-<tr>
-	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
-	<td align="center">&nbsp;</td>
-	<td><a href="#171">ファンド口座番号</a>&nbsp;</td>
-	<td>FUND_ACCOUNT_NO&nbsp;</td>
-	<td>varchar(7)&nbsp;</td>
-	<td align="center">&nbsp;</td>
-	<td align="center">NOT NULL&nbsp;</td>
-</tr>
-<tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#172">口座タイプ</a>&nbsp;</td>
-	<td>ACCOUNT_TYPE&nbsp;</td>
-	<td>varchar(50)&nbsp;</td>
-	<td align="center">&nbsp;</td>
-	<td align="center">&nbsp;</td>
-</tr>
-<tr>
-	<td align="center">&nbsp;</td>
-	<td align="center">&nbsp;</td>
-	<td><a href="#173">口座開設日時</a>&nbsp;</td>
-	<td>ACCOUNT_START_DATE&nbsp;</td>
+	<td><a href="#175">取引開始日時</a>&nbsp;</td>
+	<td>TRADE_START_DATE&nbsp;</td>
 	<td>timestamp(29)&nbsp;</td>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -166,7 +148,16 @@ function asd() {
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#174">最終更新日時</a>&nbsp;</td>
+	<td><a href="#176">満期日</a>&nbsp;</td>
+	<td>MATURITY_DAY&nbsp;</td>
+	<td>varchar(8)&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td align="center">&nbsp;</td>
+</tr>
+<tr>
+	<td align="center">&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td><a href="#177">最終更新日時</a>&nbsp;</td>
 	<td>LAST_UPDATED_AT&nbsp;</td>
 	<td>timestamp(29)&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -175,7 +166,7 @@ function asd() {
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#175">バージョン</a>&nbsp;</td>
+	<td><a href="#178">バージョン</a>&nbsp;</td>
 	<td>VER&nbsp;</td>
 	<td>int&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -204,54 +195,9 @@ function asd() {
 		<th width="12%">子の多重度</th>
 	</tr>
 	<tr>
-	<td><a href="#167">ユーザID&nbsp;</a></td>
-	<td><a href="../table/18.html">普通預金&nbsp;</a></td>
-	<td><a href="../table/18.html#107">ユーザID&nbsp;</a></td>
-	<td align="center">RESTRICT&nbsp;</td>
-	<td align="center">RESTRICT&nbsp;</td>
-	<td align="center">1&nbsp;</td>
-	<td align="center">1..n&nbsp;</td>
-</tr>
-<tr>
-	<td><a href="#168">金融機関コード&nbsp;</a></td>
-	<td><a href="../table/18.html">普通預金&nbsp;</a></td>
-	<td><a href="../table/18.html#81">金融機関コード&nbsp;</a></td>
-	<td align="center">RESTRICT&nbsp;</td>
-	<td align="center">RESTRICT&nbsp;</td>
-	<td align="center">1&nbsp;</td>
-	<td align="center">1..n&nbsp;</td>
-</tr>
-<tr>
-	<td><a href="#169">支店ID&nbsp;</a></td>
-	<td><a href="../table/18.html">普通預金&nbsp;</a></td>
-	<td><a href="../table/18.html#82">支店ID&nbsp;</a></td>
-	<td align="center">RESTRICT&nbsp;</td>
-	<td align="center">RESTRICT&nbsp;</td>
-	<td align="center">1&nbsp;</td>
-	<td align="center">1..n&nbsp;</td>
-</tr>
-<tr>
-	<td><a href="#169">支店ID&nbsp;</a></td>
-	<td><a href="../table/18.html">普通預金&nbsp;</a></td>
-	<td><a href="../table/18.html#82">支店ID&nbsp;</a></td>
-	<td align="center">RESTRICT&nbsp;</td>
-	<td align="center">RESTRICT&nbsp;</td>
-	<td align="center">1&nbsp;</td>
-	<td align="center">1..n&nbsp;</td>
-</tr>
-<tr>
-	<td><a href="#170">口座番号&nbsp;</a></td>
-	<td><a href="../table/18.html">普通預金&nbsp;</a></td>
-	<td><a href="../table/18.html#108">口座番号&nbsp;</a></td>
-	<td align="center">RESTRICT&nbsp;</td>
-	<td align="center">RESTRICT&nbsp;</td>
-	<td align="center">1&nbsp;</td>
-	<td align="center">1..n&nbsp;</td>
-</tr>
-<tr>
-	<td><a href="#170">口座番号&nbsp;</a></td>
-	<td><a href="../table/18.html">普通預金&nbsp;</a></td>
-	<td><a href="../table/18.html#108">口座番号&nbsp;</a></td>
+	<td><a href="#125">金融機関コード&nbsp;</a></td>
+	<td><a href="../table/7.html">金融機関&nbsp;</a></td>
+	<td><a href="../table/7.html#88">金融機関コード&nbsp;</a></td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">1&nbsp;</td>
@@ -279,45 +225,36 @@ function asd() {
 		<th width="12%">子の多重度</th>
 	</tr>
 	<tr>
-	<td><a href="#167">ユーザID&nbsp;</a></td>
-	<td><a href="../table/14.html">ファンド買付&nbsp;</a></td>
-	<td><a href="../table/14.html#176">ユーザID&nbsp;</a></td>
+	<td><a href="#101">ファンドID&nbsp;</a></td>
+	<td><a href="../table/3.html">リスク質問別購入可能ファンド&nbsp;</a></td>
+	<td><a href="../table/3.html#97">ファンドID&nbsp;</a></td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">1&nbsp;</td>
 	<td align="center">1..n&nbsp;</td>
 </tr>
 <tr>
-	<td><a href="#168">金融機関コード&nbsp;</a></td>
-	<td><a href="../table/14.html">ファンド買付&nbsp;</a></td>
-	<td><a href="../table/14.html#177">金融機関コード&nbsp;</a></td>
+	<td><a href="#101">ファンドID&nbsp;</a></td>
+	<td><a href="../table/14.html">ファンド手数料率&nbsp;</a></td>
+	<td><a href="../table/14.html#179">ファンドID&nbsp;</a></td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">1&nbsp;</td>
 	<td align="center">1..n&nbsp;</td>
 </tr>
 <tr>
-	<td><a href="#169">支店ID&nbsp;</a></td>
-	<td><a href="../table/14.html">ファンド買付&nbsp;</a></td>
-	<td><a href="../table/14.html#178">支店ID&nbsp;</a></td>
+	<td><a href="#101">ファンドID&nbsp;</a></td>
+	<td><a href="../table/15.html">ファンド買付&nbsp;</a></td>
+	<td><a href="../table/15.html#180">ファンドID&nbsp;</a></td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">1&nbsp;</td>
 	<td align="center">1..n&nbsp;</td>
 </tr>
 <tr>
-	<td><a href="#170">口座番号&nbsp;</a></td>
-	<td><a href="../table/14.html">ファンド買付&nbsp;</a></td>
-	<td><a href="../table/14.html#179">口座番号&nbsp;</a></td>
-	<td align="center">RESTRICT&nbsp;</td>
-	<td align="center">RESTRICT&nbsp;</td>
-	<td align="center">1&nbsp;</td>
-	<td align="center">1..n&nbsp;</td>
-</tr>
-<tr>
-	<td><a href="#171">ファンド口座番号&nbsp;</a></td>
-	<td><a href="../table/14.html">ファンド買付&nbsp;</a></td>
-	<td><a href="../table/14.html#180">ファンド口座番号&nbsp;</a></td>
+	<td><a href="#101">ファンドID&nbsp;</a></td>
+	<td><a href="../table/16.html">目論見書&nbsp;</a></td>
+	<td><a href="../table/16.html#181">ファンドID&nbsp;</a></td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">1&nbsp;</td>
@@ -333,59 +270,13 @@ function asd() {
 <a name="complex_unique_key"><!-- --></a>
 <table border="1" cellpadding="3" cellspacing="0" width="100%" class="AttributeTable">
 	<tr class="TableHeadingColor">
-		<th colspan="2">複合一意キー</th>
+		<th colspan="1">複合一意キー</th>
 	</tr>
 	<tr class="TableSubHeadingColor">
 		<th>&nbsp;</th>
-				<th>&nbsp;</th>
-
+		
 	</tr>
-		<tr>
-		<th class="TableSubHeadingColor" align="left">ユーザID&nbsp;</th>
-				<td align="center">1&nbsp;</td>
-
-	</tr>
-	<tr>
-		<th class="TableSubHeadingColor" align="left">金融機関コード&nbsp;</th>
-				<td align="center">2&nbsp;</td>
-
-	</tr>
-	<tr>
-		<th class="TableSubHeadingColor" align="left">支店ID&nbsp;</th>
-				<td align="center">3&nbsp;</td>
-
-	</tr>
-	<tr>
-		<th class="TableSubHeadingColor" align="left">口座番号&nbsp;</th>
-				<td align="center">4&nbsp;</td>
-
-	</tr>
-	<tr>
-		<th class="TableSubHeadingColor" align="left">ファンド口座番号&nbsp;</th>
-				<td align="center">5&nbsp;</td>
-
-	</tr>
-	<tr>
-		<th class="TableSubHeadingColor" align="left">口座タイプ&nbsp;</th>
-				<td align="center">&nbsp;</td>
-
-	</tr>
-	<tr>
-		<th class="TableSubHeadingColor" align="left">口座開設日時&nbsp;</th>
-				<td align="center">&nbsp;</td>
-
-	</tr>
-	<tr>
-		<th class="TableSubHeadingColor" align="left">最終更新日時&nbsp;</th>
-				<td align="center">&nbsp;</td>
-
-	</tr>
-	<tr>
-		<th class="TableSubHeadingColor" align="left">バージョン&nbsp;</th>
-				<td align="center">&nbsp;</td>
-
-	</tr>
-
+	
 </table>
 
 
@@ -424,11 +315,11 @@ function asd() {
 	</tr>
 </table>
 
-<a name="167"></a>
-<h3><img src="../image/icons/pkey.gif"> <img src="../image/icons/foreign_key.gif"> ユーザID</h3>
+<a name="101"></a>
+<h3><img src="../image/icons/pkey.gif">  ファンドID</h3>
 
 <dl>
-	<dd>USER_ID
+	<dd>FUND_ID
 	<p>
 	<dd><pre></pre>
 	<p>
@@ -445,8 +336,50 @@ function asd() {
 <p>
 
 <hr>
-<a name="168"></a>
-<h3><img src="../image/icons/pkey.gif"> <img src="../image/icons/foreign_key.gif"> 金融機関コード</h3>
+<a name="173"></a>
+<h3>  ファンド名</h3>
+
+<dl>
+	<dd>FUND_NAME
+	<p>
+	<dd><pre></pre>
+	<p>
+	<dl>
+		<dt><b>UNIQUE : </b>FALSE<br></dt>
+		<dt><b>NOT NULL : </b>FALSE<br></dt>
+		<dt><b>型 : </b>varchar(512)<br></dt>
+		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
+		<dt><b>デフォルト値 : </b><br></dt>
+		<dt><b>制約 : </b><br></dt>
+	</dl>
+</dl>
+
+<p>
+
+<hr>
+<a name="174"></a>
+<h3>  取引開始日</h3>
+
+<dl>
+	<dd>TRADE_START_DAY
+	<p>
+	<dd><pre></pre>
+	<p>
+	<dl>
+		<dt><b>UNIQUE : </b>FALSE<br></dt>
+		<dt><b>NOT NULL : </b>FALSE<br></dt>
+		<dt><b>型 : </b>varchar(8)<br></dt>
+		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
+		<dt><b>デフォルト値 : </b><br></dt>
+		<dt><b>制約 : </b><br></dt>
+	</dl>
+</dl>
+
+<p>
+
+<hr>
+<a name="125"></a>
+<h3> <img src="../image/icons/foreign_key.gif"> 金融機関コード</h3>
 
 <dl>
 	<dd>FINANCIAL_CODE
@@ -466,95 +399,11 @@ function asd() {
 <p>
 
 <hr>
-<a name="169"></a>
-<h3><img src="../image/icons/pkey.gif"> <img src="../image/icons/foreign_key.gif"> 支店ID</h3>
+<a name="175"></a>
+<h3>  取引開始日時</h3>
 
 <dl>
-	<dd>BRANCH_ID
-	<p>
-	<dd><pre></pre>
-	<p>
-	<dl>
-		<dt><b>UNIQUE : </b>FALSE<br></dt>
-		<dt><b>NOT NULL : </b>TRUE<br></dt>
-		<dt><b>型 : </b>varchar(6)<br></dt>
-		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
-		<dt><b>デフォルト値 : </b><br></dt>
-		<dt><b>制約 : </b><br></dt>
-	</dl>
-</dl>
-
-<p>
-
-<hr>
-<a name="170"></a>
-<h3><img src="../image/icons/pkey.gif"> <img src="../image/icons/foreign_key.gif"> 口座番号</h3>
-
-<dl>
-	<dd>ACCOUNT_NO
-	<p>
-	<dd><pre></pre>
-	<p>
-	<dl>
-		<dt><b>UNIQUE : </b>FALSE<br></dt>
-		<dt><b>NOT NULL : </b>TRUE<br></dt>
-		<dt><b>型 : </b>varchar(7)<br></dt>
-		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
-		<dt><b>デフォルト値 : </b><br></dt>
-		<dt><b>制約 : </b><br></dt>
-	</dl>
-</dl>
-
-<p>
-
-<hr>
-<a name="171"></a>
-<h3><img src="../image/icons/pkey.gif">  ファンド口座番号</h3>
-
-<dl>
-	<dd>FUND_ACCOUNT_NO
-	<p>
-	<dd><pre></pre>
-	<p>
-	<dl>
-		<dt><b>UNIQUE : </b>FALSE<br></dt>
-		<dt><b>NOT NULL : </b>TRUE<br></dt>
-		<dt><b>型 : </b>varchar(7)<br></dt>
-		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
-		<dt><b>デフォルト値 : </b><br></dt>
-		<dt><b>制約 : </b><br></dt>
-	</dl>
-</dl>
-
-<p>
-
-<hr>
-<a name="172"></a>
-<h3>  口座タイプ</h3>
-
-<dl>
-	<dd>ACCOUNT_TYPE
-	<p>
-	<dd><pre></pre>
-	<p>
-	<dl>
-		<dt><b>UNIQUE : </b>FALSE<br></dt>
-		<dt><b>NOT NULL : </b>FALSE<br></dt>
-		<dt><b>型 : </b>varchar(50)<br></dt>
-		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
-		<dt><b>デフォルト値 : </b><br></dt>
-		<dt><b>制約 : </b><br></dt>
-	</dl>
-</dl>
-
-<p>
-
-<hr>
-<a name="173"></a>
-<h3>  口座開設日時</h3>
-
-<dl>
-	<dd>ACCOUNT_START_DATE
+	<dd>TRADE_START_DATE
 	<p>
 	<dd><pre></pre>
 	<p>
@@ -571,7 +420,28 @@ function asd() {
 <p>
 
 <hr>
-<a name="174"></a>
+<a name="176"></a>
+<h3>  満期日</h3>
+
+<dl>
+	<dd>MATURITY_DAY
+	<p>
+	<dd><pre></pre>
+	<p>
+	<dl>
+		<dt><b>UNIQUE : </b>FALSE<br></dt>
+		<dt><b>NOT NULL : </b>FALSE<br></dt>
+		<dt><b>型 : </b>varchar(8)<br></dt>
+		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
+		<dt><b>デフォルト値 : </b><br></dt>
+		<dt><b>制約 : </b><br></dt>
+	</dl>
+</dl>
+
+<p>
+
+<hr>
+<a name="177"></a>
 <h3>  最終更新日時</h3>
 
 <dl>
@@ -592,7 +462,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="175"></a>
+<a name="178"></a>
 <h3>  バージョン</h3>
 
 <dl>
